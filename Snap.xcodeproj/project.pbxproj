@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF16714D1BF3AC0A00E38E86 /* SnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16714C1BF3AC0A00E38E86 /* SnapTests.m */; };
 		EF1671581BF3AC0A00E38E86 /* SnapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671571BF3AC0A00E38E86 /* SnapUITests.m */; };
 		EF1671711BF3AFA200E38E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1671671BF3AFA200E38E86 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16716C1BF3AFA200E38E86 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
@@ -15,6 +14,10 @@
 		EF1671821BF3C13400E38E86 /* card-layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* card-layouts.txt */; settings = {ASSET_TAGS = (); }; };
 		EF1671831BF3C13400E38E86 /* card-layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* card-layouts.txt */; settings = {ASSET_TAGS = (); }; };
 		EF1671841BF3C13400E38E86 /* card-layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* card-layouts.txt */; settings = {ASSET_TAGS = (); }; };
+		EF1671891BF3C25700E38E86 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671881BF3C25700E38E86 /* Card.m */; settings = {ASSET_TAGS = (); }; };
+		EF16718A1BF3C25700E38E86 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671881BF3C25700E38E86 /* Card.m */; settings = {ASSET_TAGS = (); }; };
+		EF16718C1BF3C28300E38E86 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16718B1BF3C28300E38E86 /* CardTests.swift */; settings = {ASSET_TAGS = (); }; };
+		EF16718F1BF3C2C000E38E86 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF16718E1BF3C2C000E38E86 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +40,6 @@
 /* Begin PBXFileReference section */
 		EF16712F1BF3AC0900E38E86 /* Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1671481BF3AC0A00E38E86 /* SnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF16714C1BF3AC0A00E38E86 /* SnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapTests.m; sourceTree = "<group>"; };
-		EF16714E1BF3AC0A00E38E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1671531BF3AC0A00E38E86 /* SnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1671571BF3AC0A00E38E86 /* SnapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapUITests.m; sourceTree = "<group>"; };
 		EF1671591BF3AC0A00E38E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,11 @@
 		EF1671701BF3AFA200E38E86 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF16717E1BF3B11400E38E86 /* Snap-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Snap-Bridging-Header.h"; sourceTree = "<group>"; };
 		EF1671811BF3C13400E38E86 /* card-layouts.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "card-layouts.txt"; sourceTree = "<group>"; };
+		EF1671871BF3C25700E38E86 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		EF1671881BF3C25700E38E86 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		EF16718B1BF3C28300E38E86 /* CardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		EF16718E1BF3C2C000E38E86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1671901BF3C30F00E38E86 /* Snap-Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snap-Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +115,8 @@
 		EF16714B1BF3AC0A00E38E86 /* SnapTests */ = {
 			isa = PBXGroup;
 			children = (
-				EF16714C1BF3AC0A00E38E86 /* SnapTests.m */,
-				EF16714E1BF3AC0A00E38E86 /* Info.plist */,
+				EF16718D1BF3C2C000E38E86 /* Supporting Files */,
+				EF16718B1BF3C28300E38E86 /* CardTests.swift */,
 			);
 			path = SnapTests;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				EF1671691BF3AFA200E38E86 /* Core */,
+				EF1671851BF3C21E00E38E86 /* Game */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -182,6 +189,32 @@
 				EF16717E1BF3B11400E38E86 /* Snap-Bridging-Header.h */,
 			);
 			path = Bridging;
+			sourceTree = "<group>";
+		};
+		EF1671851BF3C21E00E38E86 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671861BF3C21E00E38E86 /* Models */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		EF1671861BF3C21E00E38E86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671871BF3C25700E38E86 /* Card.h */,
+				EF1671881BF3C25700E38E86 /* Card.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF16718D1BF3C2C000E38E86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF16718E1BF3C2C000E38E86 /* Info.plist */,
+				EF1671901BF3C30F00E38E86 /* Snap-Tests-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF16718F1BF3C2C000E38E86 /* Info.plist in Resources */,
 				EF1671831BF3C13400E38E86 /* card-layouts.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +352,7 @@
 			files = (
 				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
+				EF1671891BF3C25700E38E86 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +360,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF16714D1BF3AC0A00E38E86 /* SnapTests.m in Sources */,
+				EF16718C1BF3C28300E38E86 /* CardTests.swift in Sources */,
+				EF16718A1BF3C25700E38E86 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,11 +509,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = SnapTests/Info.plist;
+				INFOPLIST_FILE = "SnapTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justjoey.SnapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Snap/Supporting Files/Bridging/Snap-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapTests/Supporting Files/Snap-Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snap.app/Snap";
 			};
@@ -488,11 +524,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = SnapTests/Info.plist;
+				INFOPLIST_FILE = "SnapTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justjoey.SnapTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Snap/Supporting Files/Bridging/Snap-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapTests/Supporting Files/Snap-Tests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snap.app/Snap";
 			};
 			name = Release;
