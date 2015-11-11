@@ -7,15 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Card.h"
 
-typedef NS_ENUM(NSUInteger, CardSuit) {
+
+typedef NS_ENUM(NSUInteger, SuitedCardSuit) {
     Hearts,
     Diamonds,
     Spades,
     Clubs
 };
 
-typedef NS_ENUM(NSUInteger, CardValue) {
+typedef NS_ENUM(NSUInteger, SuitedCardValue) {
     Ace = 1,
     Jack = 11,
     Queen,
@@ -24,28 +26,26 @@ typedef NS_ENUM(NSUInteger, CardValue) {
 
 
 /**
- Describes the model of a card. A card in Snap typically consists
+ Describes the model of a standard suited card. A card in Snap typically consists
  of a suit and a value. A value can represent an Ace, any number between 2-10 
  (inclusive), Jack, Queen and King.
  
  Example: 8 of Hearts
  */
-@interface Card : NSObject <NSCopying>
+@interface SuitedCard: NSObject<Card, NSCopying>
 
 /**
  The suit of the Card. It should be either Hearts, Diamonds, Spades or Clubs.
  */
-@property (assign, nonatomic, readonly) CardSuit suit;
+@property (assign, nonatomic, readonly) SuitedCardSuit suit;
 
-/**
- The value of the Card. It should be between 1-13
- */
-@property (assign, nonatomic, readonly) CardValue value;
+/** The value of the suited card, it can be between 1 and 13 */
+@property (assign, nonatomic, readonly) SuitedCardValue value;
 
 
 /** 
  Initializes a Card with a given suit and value.
  */
-- (instancetype)initWithSuit:(CardSuit)suit andValue:(CardValue)value;
+- (instancetype)initWithSuit:(SuitedCardSuit)suit andValue:(SuitedCardValue)value;
 
 @end

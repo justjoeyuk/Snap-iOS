@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Card;
+#import "Card.h"
 
 
 /** 
@@ -24,13 +24,13 @@
 /** Initializes the Deck with a capacity */
 - (instancetype)initWithCapacity:(NSUInteger)deckSize;
 
-/** Adds all cards to the deck */
-- (void)fillWithCards;
+/** Adds a full set of suited cards to the deck */
+- (void)fillWithSuitedCards;
 
 /** Shuffles all the cards randomly in the deck */
 - (void)shuffleCards;
 
 /** Adds a card to the end of the deck */
-- (void)addCard:(Card *)card;
+- (void)addCard:(id<Card>)card;
 
 @end

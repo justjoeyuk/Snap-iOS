@@ -8,6 +8,7 @@
 
 #import "Deck.h"
 #import "Card.h"
+#import "SuitedCard.h"
 
 
 @interface Deck()
@@ -44,11 +45,11 @@
 
 #pragma mark Deck Manipulation
 
-- (void)fillWithCards
+- (void)fillWithSuitedCards
 {
     for (int suit = 1; suit <= 4; suit++) {
         for (int value = 1; value <= 13; value++) {
-            Card *newCard = [[Card alloc] initWithSuit:suit andValue:value];
+             SuitedCard *newCard = [[SuitedCard alloc] initWithSuit:suit andValue:value];
             [self addCard:newCard];
         }
     }
@@ -68,7 +69,7 @@
     } while ( [original isEqualToArray:self.cards] );
 }
 
-- (void)addCard:(Card *)card
+- (void)addCard:(id<Card>)card
 {
     [self.cards addObject:card];
 }

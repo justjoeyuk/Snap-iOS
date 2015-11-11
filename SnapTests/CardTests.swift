@@ -20,8 +20,8 @@ class CardTests: XCTestCase {
     }
     
     func testThatCardsRetainsSuitsAndValues() {
-        let card = Card(suit: .Hearts, andValue: .Ace)
-        let expectedCard = Card(suit: .Hearts, andValue: .Ace)
+        let card = SuitedCard(suit: .Hearts, andValue: .Ace)
+        let expectedCard = SuitedCard(suit: .Hearts, andValue: .Ace)
         
         XCTAssertEqual(card, expectedCard)
     }

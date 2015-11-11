@@ -1,5 +1,5 @@
 //
-//  CardView.swift
+//  BoardView.swift
 //  Snap
 //
 //  Created by Joey Clover on 11/11/2015.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class CardView: UIView {
+class BoardView: BaseView {
     
     
     

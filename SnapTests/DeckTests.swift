@@ -20,8 +20,8 @@ class DeckTests: XCTestCase {
     
     func testThatDeckCanAddCards() {
         let deck = Deck()
-        let cardOne = Card(suit: .Hearts, andValue: .Ace)
-        let cardTwo = Card(suit: .Clubs, andValue: .Ace)
+        let cardOne = SuitedCard(suit: .Hearts, andValue: .Ace)
+        let cardTwo = SuitedCard(suit: .Clubs, andValue: .Ace)
         
         deck.addCard(cardOne)
         deck.addCard(cardTwo)
@@ -31,7 +31,7 @@ class DeckTests: XCTestCase {
     
     func testThatShuffleWorks() {
         let deck = Deck()
-        deck.fillWithCards()
+        deck.fillWithSuitedCards()
         
         let originalDeck = deck.copy() as! Deck
         deck.shuffleCards()

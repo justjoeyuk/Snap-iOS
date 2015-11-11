@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E4455863A89BB603854DE77 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AACD01601302F6EECB34D71 /* Pods.framework */; };
 		EF1671581BF3AC0A00E38E86 /* SnapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671571BF3AC0A00E38E86 /* SnapUITests.m */; };
 		EF1671711BF3AFA200E38E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1671671BF3AFA200E38E86 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16716C1BF3AFA200E38E86 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
@@ -16,11 +17,15 @@
 		EF1671841BF3C13400E38E86 /* card-layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* card-layouts.txt */; settings = {ASSET_TAGS = (); }; };
 		EF16718C1BF3C28300E38E86 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16718B1BF3C28300E38E86 /* CardTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671941BF3CD7500E38E86 /* DeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671931BF3CD7500E38E86 /* DeckTests.swift */; settings = {ASSET_TAGS = (); }; };
-		EF1671991BF3CE5500E38E86 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671971BF3CE5500E38E86 /* Card.m */; settings = {ASSET_TAGS = (); }; };
-		EF16719A1BF3CE5500E38E86 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671971BF3CE5500E38E86 /* Card.m */; settings = {ASSET_TAGS = (); }; };
 		EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16719C1BF3CE7A00E38E86 /* Deck.m */; settings = {ASSET_TAGS = (); }; };
 		EF16719E1BF3CE7A00E38E86 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16719C1BF3CE7A00E38E86 /* Deck.m */; settings = {ASSET_TAGS = (); }; };
-		EF1671A21BF3D82700E38E86 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A11BF3D82700E38E86 /* CardView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A61BF3DAFD00E38E86 /* BaseView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671A91BF3DAFD00E38E86 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A71BF3DAFD00E38E86 /* BaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671AB1BF3DF6B00E38E86 /* GameViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671BE1BF3F6C500E38E86 /* SuitedCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */; settings = {ASSET_TAGS = (); }; };
+		EF1671C61BF3FA4500E38E86 /* SuitedCardView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671C71BF3FA4500E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C91BF3FB2C00E38E86 /* BoardView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5AACD01601302F6EECB34D71 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D68F8B00B4D156FAC025D67 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BEF8682C06943BA3E20924AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF16712F1BF3AC0900E38E86 /* Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1671481BF3AC0A00E38E86 /* SnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1671531BF3AC0A00E38E86 /* SnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,11 +65,17 @@
 		EF16718E1BF3C2C000E38E86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1671901BF3C30F00E38E86 /* Snap-Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snap-Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EF1671931BF3CD7500E38E86 /* DeckTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckTests.swift; sourceTree = "<group>"; };
-		EF1671961BF3CE5500E38E86 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		EF1671971BF3CE5500E38E86 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		EF16719B1BF3CE7A00E38E86 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		EF16719C1BF3CE7A00E38E86 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
-		EF1671A11BF3D82700E38E86 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EF1671A61BF3DAFD00E38E86 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		EF1671A71BF3DAFD00E38E86 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EF1671AB1BF3DF6B00E38E86 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EF1671BC1BF3F6C500E38E86 /* SuitedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCard.h; sourceTree = "<group>"; };
+		EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCard.m; sourceTree = "<group>"; };
+		EF1671BF1BF3F6F100E38E86 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SuitedCardView+Layout.swift"; sourceTree = "<group>"; };
+		EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardView.swift; sourceTree = "<group>"; };
+		EF1671C91BF3FB2C00E38E86 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4455863A89BB603854DE77 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85E8BAE4BAE8531DC47A8958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AACD01601302F6EECB34D71 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAD5DCD3753727D98BD4FE27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D68F8B00B4D156FAC025D67 /* Pods.debug.xcconfig */,
+				BEF8682C06943BA3E20924AA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF1671261BF3AC0900E38E86 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +128,8 @@
 				EF16714B1BF3AC0A00E38E86 /* SnapTests */,
 				EF1671561BF3AC0A00E38E86 /* SnapUITests */,
 				EF1671301BF3AC0900E38E86 /* Products */,
+				DAD5DCD3753727D98BD4FE27 /* Pods */,
+				85E8BAE4BAE8531DC47A8958 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				EF16716A1BF3AFA200E38E86 /* App Delegate */,
+				EF1671A51BF3DAE800E38E86 /* Base Classes */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -202,8 +237,9 @@
 		EF1671851BF3C21E00E38E86 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				EF16719F1BF3D7E500E38E86 /* Views */,
 				EF1671861BF3C21E00E38E86 /* Models */,
+				EF16719F1BF3D7E500E38E86 /* Views */,
+				EF1671AA1BF3DF6200E38E86 /* View Controllers */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -211,7 +247,7 @@
 		EF1671861BF3C21E00E38E86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EF1671951BF3CE5500E38E86 /* Card */,
+				EF1671BA1BF3F6C500E38E86 /* Cards */,
 				EF1671981BF3CE5500E38E86 /* Deck */,
 			);
 			path = Models;
@@ -226,15 +262,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EF1671951BF3CE5500E38E86 /* Card */ = {
-			isa = PBXGroup;
-			children = (
-				EF1671961BF3CE5500E38E86 /* Card.h */,
-				EF1671971BF3CE5500E38E86 /* Card.m */,
-			);
-			path = Card;
-			sourceTree = "<group>";
-		};
 		EF1671981BF3CE5500E38E86 /* Deck */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,17 +274,70 @@
 		EF16719F1BF3D7E500E38E86 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EF1671A01BF3D81300E38E86 /* Card */,
+				EF1671C81BF3FB0C00E38E86 /* Board */,
+				EF1671C21BF3FA4500E38E86 /* Cards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		EF1671A01BF3D81300E38E86 /* Card */ = {
+		EF1671A51BF3DAE800E38E86 /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
-				EF1671A11BF3D82700E38E86 /* CardView.swift */,
+				EF1671A61BF3DAFD00E38E86 /* BaseView.swift */,
+				EF1671A71BF3DAFD00E38E86 /* BaseViewController.swift */,
 			);
-			path = Card;
+			path = "Base Classes";
+			sourceTree = "<group>";
+		};
+		EF1671AA1BF3DF6200E38E86 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671AB1BF3DF6B00E38E86 /* GameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EF1671BA1BF3F6C500E38E86 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671BF1BF3F6F100E38E86 /* Card.h */,
+				EF1671BB1BF3F6C500E38E86 /* Suited Card */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		EF1671BB1BF3F6C500E38E86 /* Suited Card */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671BC1BF3F6C500E38E86 /* SuitedCard.h */,
+				EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */,
+			);
+			path = "Suited Card";
+			sourceTree = "<group>";
+		};
+		EF1671C21BF3FA4500E38E86 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671C31BF3FA4500E38E86 /* Suited Card */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		EF1671C31BF3FA4500E38E86 /* Suited Card */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */,
+				EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */,
+			);
+			path = "Suited Card";
+			sourceTree = "<group>";
+		};
+		EF1671C81BF3FB0C00E38E86 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671C91BF3FB2C00E38E86 /* BoardView.swift */,
+			);
+			path = Board;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +347,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF16715C1BF3AC0A00E38E86 /* Build configuration list for PBXNativeTarget "Snap" */;
 			buildPhases = (
+				56DF110715361B7E8E33A145 /* Check Pods Manifest.lock */,
 				EF16712B1BF3AC0900E38E86 /* Sources */,
 				EF16712C1BF3AC0900E38E86 /* Frameworks */,
 				EF16712D1BF3AC0900E38E86 /* Resources */,
+				C8AE31A44798978452996D13 /* Embed Pods Frameworks */,
+				2111A378980D14B423AAC746 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -387,16 +470,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2111A378980D14B423AAC746 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56DF110715361B7E8E33A145 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C8AE31A44798978452996D13 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF16712B1BF3AC0900E38E86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */,
+				EF1671C71BF3FA4500E38E86 /* SuitedCardView.swift in Sources */,
 				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
-				EF1671991BF3CE5500E38E86 /* Card.m in Sources */,
-				EF1671A21BF3D82700E38E86 /* CardView.swift in Sources */,
+				EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */,
+				EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */,
+				EF1671C61BF3FA4500E38E86 /* SuitedCardView+Layout.swift in Sources */,
+				EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */,
+				EF1671A91BF3DAFD00E38E86 /* BaseViewController.swift in Sources */,
+				EF1671BE1BF3F6C500E38E86 /* SuitedCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +543,6 @@
 				EF16719E1BF3CE7A00E38E86 /* Deck.m in Sources */,
 				EF1671941BF3CD7500E38E86 /* DeckTests.swift in Sources */,
 				EF16718C1BF3C28300E38E86 /* CardTests.swift in Sources */,
-				EF16719A1BF3CE5500E38E86 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +654,7 @@
 		};
 		EF16715D1BF3AC0A00E38E86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D68F8B00B4D156FAC025D67 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -536,6 +672,7 @@
 		};
 		EF16715E1BF3AC0A00E38E86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEF8682C06943BA3E20924AA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

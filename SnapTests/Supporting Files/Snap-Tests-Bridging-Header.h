@@ -1,2 +1,2 @@
-#import "Card.h"
+#import "SuitedCard.h"
 #import "Deck.h"
