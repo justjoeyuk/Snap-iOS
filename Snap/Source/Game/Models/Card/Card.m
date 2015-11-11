@@ -32,6 +32,12 @@
 }
 
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [[Card alloc] initWithSuit:self.suit andValue:self.value];
+}
+
+
 - (BOOL)isEqual:(id)object
 {
     Card *otherCard = (Card *)object;

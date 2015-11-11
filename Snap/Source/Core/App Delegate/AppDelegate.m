@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Deck.h"
 
 @implementation AppDelegate
 
@@ -18,6 +18,9 @@
     self.window.rootViewController = [[UIViewController alloc] init];
     [self.window makeKeyAndVisible];
   
+    Deck *d = [[Deck alloc] init];
+    [d fillWithCards];
+    
     return YES;
 }
 

@@ -15,7 +15,7 @@
  
  @see Card
  */
-@interface Deck : NSObject
+@interface Deck : NSObject <NSCopying>
 
 /** The internal collection of cards */
 @property (strong, nonatomic, readonly) NSMutableArray *cards;
@@ -23,6 +23,12 @@
 
 /** Initializes the Deck with a capacity */
 - (instancetype)initWithCapacity:(NSUInteger)deckSize;
+
+/** Adds all cards to the deck */
+- (void)fillWithCards;
+
+/** Shuffles all the cards randomly in the deck */
+- (void)shuffleCards;
 
 /** Adds a card to the end of the deck */
 - (void)addCard:(Card *)card;

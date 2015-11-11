@@ -30,7 +30,7 @@ typedef NS_ENUM(NSUInteger, CardValue) {
  
  Example: 8 of Hearts
  */
-@interface Card : NSObject
+@interface Card : NSObject <NSCopying>
 
 /**
  The suit of the Card. It should be either Hearts, Diamonds, Spades or Clubs.

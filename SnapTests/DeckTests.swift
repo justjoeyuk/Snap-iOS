@@ -29,4 +29,14 @@ class DeckTests: XCTestCase {
         XCTAssertEqual(deck.cards.count, 2)
     }
     
+    func testThatShuffleWorks() {
+        let deck = Deck()
+        deck.fillWithCards()
+        
+        let originalDeck = deck.copy() as! Deck
+        deck.shuffleCards()
+        
+        XCTAssertNotEqual(deck, originalDeck)
+    }
+    
 }
