@@ -20,7 +20,7 @@ class GameViewController: BaseViewController {
     }
     
     override func setup() {
-        let card = SuitedCard(suit: .Clubs, andValue: .Ace)
+        let card = SuitedCard(suit: .Spades, andValue: SuitedCardValue(rawValue: 7)!)
         let cardView = SuitedCardView(card: card)
         
         let width = UIScreen.mainScreen().bounds.width / 2

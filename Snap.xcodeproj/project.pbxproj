@@ -24,8 +24,10 @@
 		EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671AB1BF3DF6B00E38E86 /* GameViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671BE1BF3F6C500E38E86 /* SuitedCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */; settings = {ASSET_TAGS = (); }; };
 		EF1671C61BF3FA4500E38E86 /* SuitedCardView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */; settings = {ASSET_TAGS = (); }; };
-		EF1671C71BF3FA4500E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C91BF3FB2C00E38E86 /* BoardView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A61BF3DAFD00E38E86 /* BaseView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -524,8 +526,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */,
-				EF1671C71BF3FA4500E38E86 /* SuitedCardView.swift in Sources */,
 				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
+				EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */,
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
 				EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */,
 				EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */,
@@ -542,6 +544,8 @@
 			files = (
 				EF16719E1BF3CE7A00E38E86 /* Deck.m in Sources */,
 				EF1671941BF3CD7500E38E86 /* DeckTests.swift in Sources */,
+				EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */,
+				EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */,
 				EF16718C1BF3C28300E38E86 /* CardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
