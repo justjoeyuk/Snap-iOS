@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EF1671341BF3AC0900E38E86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671331BF3AC0900E38E86 /* main.m */; };
-		EF1671371BF3AC0900E38E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671361BF3AC0900E38E86 /* AppDelegate.m */; };
-		EF16713A1BF3AC0900E38E86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671391BF3AC0900E38E86 /* ViewController.m */; };
-		EF16713D1BF3AC0900E38E86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF16713B1BF3AC0900E38E86 /* Main.storyboard */; };
-		EF16713F1BF3AC0900E38E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF16713E1BF3AC0900E38E86 /* Assets.xcassets */; };
-		EF1671421BF3AC0900E38E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1671401BF3AC0900E38E86 /* LaunchScreen.storyboard */; };
 		EF16714D1BF3AC0A00E38E86 /* SnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16714C1BF3AC0A00E38E86 /* SnapTests.m */; };
 		EF1671581BF3AC0A00E38E86 /* SnapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671571BF3AC0A00E38E86 /* SnapUITests.m */; };
+		EF1671711BF3AFA200E38E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1671671BF3AFA200E38E86 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16716C1BF3AFA200E38E86 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		EF1671741BF3AFA200E38E86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671701BF3AFA200E38E86 /* main.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +33,17 @@
 
 /* Begin PBXFileReference section */
 		EF16712F1BF3AC0900E38E86 /* Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF1671331BF3AC0900E38E86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EF1671351BF3AC0900E38E86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EF1671361BF3AC0900E38E86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF1671381BF3AC0900E38E86 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF1671391BF3AC0900E38E86 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EF16713C1BF3AC0900E38E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EF16713E1BF3AC0900E38E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF1671411BF3AC0900E38E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EF1671431BF3AC0900E38E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1671481BF3AC0A00E38E86 /* SnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF16714C1BF3AC0A00E38E86 /* SnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapTests.m; sourceTree = "<group>"; };
 		EF16714E1BF3AC0A00E38E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1671531BF3AC0A00E38E86 /* SnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1671571BF3AC0A00E38E86 /* SnapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapUITests.m; sourceTree = "<group>"; };
 		EF1671591BF3AC0A00E38E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1671671BF3AFA200E38E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF16716B1BF3AFA200E38E86 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF16716C1BF3AFA200E38E86 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF16716F1BF3AFA200E38E86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1671701BF3AFA200E38E86 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,25 +94,11 @@
 		EF1671311BF3AC0900E38E86 /* Snap */ = {
 			isa = PBXGroup;
 			children = (
-				EF1671351BF3AC0900E38E86 /* AppDelegate.h */,
-				EF1671361BF3AC0900E38E86 /* AppDelegate.m */,
-				EF1671381BF3AC0900E38E86 /* ViewController.h */,
-				EF1671391BF3AC0900E38E86 /* ViewController.m */,
-				EF16713B1BF3AC0900E38E86 /* Main.storyboard */,
-				EF16713E1BF3AC0900E38E86 /* Assets.xcassets */,
-				EF1671401BF3AC0900E38E86 /* LaunchScreen.storyboard */,
-				EF1671431BF3AC0900E38E86 /* Info.plist */,
-				EF1671321BF3AC0900E38E86 /* Supporting Files */,
+				EF1671661BF3AFA200E38E86 /* Assets */,
+				EF1671681BF3AFA200E38E86 /* Source */,
+				EF16716D1BF3AFA200E38E86 /* Supporting Files */,
 			);
 			path = Snap;
-			sourceTree = "<group>";
-		};
-		EF1671321BF3AC0900E38E86 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EF1671331BF3AC0900E38E86 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		EF16714B1BF3AC0A00E38E86 /* SnapTests */ = {
@@ -138,6 +117,56 @@
 				EF1671591BF3AC0A00E38E86 /* Info.plist */,
 			);
 			path = SnapUITests;
+			sourceTree = "<group>";
+		};
+		EF1671661BF3AFA200E38E86 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671671BF3AFA200E38E86 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EF1671681BF3AFA200E38E86 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671691BF3AFA200E38E86 /* Core */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EF1671691BF3AFA200E38E86 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EF16716A1BF3AFA200E38E86 /* App Delegate */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EF16716A1BF3AFA200E38E86 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EF16716B1BF3AFA200E38E86 /* AppDelegate.h */,
+				EF16716C1BF3AFA200E38E86 /* AppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		EF16716D1BF3AFA200E38E86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF16716E1BF3AFA200E38E86 /* Configuration */,
+				EF1671701BF3AFA200E38E86 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF16716E1BF3AFA200E38E86 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EF16716F1BF3AFA200E38E86 /* Info.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1671421BF3AC0900E38E86 /* LaunchScreen.storyboard in Resources */,
-				EF16713F1BF3AC0900E38E86 /* Assets.xcassets in Resources */,
-				EF16713D1BF3AC0900E38E86 /* Main.storyboard in Resources */,
+				EF1671711BF3AFA200E38E86 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF16713A1BF3AC0900E38E86 /* ViewController.m in Sources */,
-				EF1671371BF3AC0900E38E86 /* AppDelegate.m in Sources */,
-				EF1671341BF3AC0900E38E86 /* main.m in Sources */,
+				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
+				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,25 +332,6 @@
 			targetProxy = EF1671541BF3AC0A00E38E86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EF16713B1BF3AC0900E38E86 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF16713C1BF3AC0900E38E86 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EF1671401BF3AC0900E38E86 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF1671411BF3AC0900E38E86 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EF16715A1BF3AC0A00E38E86 /* Debug */ = {
@@ -363,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -401,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -413,7 +420,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Snap/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Snap/Supporting Files/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justjoey.Snap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +432,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Snap/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Snap/Supporting Files/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justjoey.Snap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +507,7 @@
 				EF16715E1BF3AC0A00E38E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF16715F1BF3AC0A00E38E86 /* Build configuration list for PBXNativeTarget "SnapTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +516,7 @@
 				EF1671611BF3AC0A00E38E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF1671621BF3AC0A00E38E86 /* Build configuration list for PBXNativeTarget "SnapUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +525,7 @@
 				EF1671641BF3AC0A00E38E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
