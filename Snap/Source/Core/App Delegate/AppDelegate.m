@@ -17,9 +17,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[UIViewController alloc] init];
     [self.window makeKeyAndVisible];
-  
-    Deck *d = [[Deck alloc] init];
-    [d fillWithCards];
     
     return YES;
 }
