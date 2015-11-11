@@ -7,10 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Snap-Swift.h"
 
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate
 
