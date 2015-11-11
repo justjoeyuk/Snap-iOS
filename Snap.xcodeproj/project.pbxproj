@@ -20,6 +20,7 @@
 		EF16719A1BF3CE5500E38E86 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671971BF3CE5500E38E86 /* Card.m */; settings = {ASSET_TAGS = (); }; };
 		EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16719C1BF3CE7A00E38E86 /* Deck.m */; settings = {ASSET_TAGS = (); }; };
 		EF16719E1BF3CE7A00E38E86 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16719C1BF3CE7A00E38E86 /* Deck.m */; settings = {ASSET_TAGS = (); }; };
+		EF1671A21BF3D82700E38E86 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A11BF3D82700E38E86 /* CardView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		EF1671971BF3CE5500E38E86 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		EF16719B1BF3CE7A00E38E86 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
 		EF16719C1BF3CE7A00E38E86 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		EF1671A11BF3D82700E38E86 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		EF1671851BF3C21E00E38E86 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				EF16719F1BF3D7E500E38E86 /* Views */,
 				EF1671861BF3C21E00E38E86 /* Models */,
 			);
 			path = Game;
@@ -239,6 +242,22 @@
 				EF16719C1BF3CE7A00E38E86 /* Deck.m */,
 			);
 			path = Deck;
+			sourceTree = "<group>";
+		};
+		EF16719F1BF3D7E500E38E86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671A01BF3D81300E38E86 /* Card */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF1671A01BF3D81300E38E86 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				EF1671A11BF3D82700E38E86 /* CardView.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +396,7 @@
 				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
 				EF1671991BF3CE5500E38E86 /* Card.m in Sources */,
+				EF1671A21BF3D82700E38E86 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
