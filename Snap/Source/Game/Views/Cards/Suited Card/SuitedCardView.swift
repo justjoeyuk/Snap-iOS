@@ -12,41 +12,41 @@ import UIKit
 
 class SuitedCardView: BaseView {
     
+    var decorator: SuitedCardViewDecorator?
     var suitCollectionView: UICollectionView
     
     var suitCharacter:Character = "?"
     var valueText:String = "??"
     
-    var topValueLabel, bottomValueLabel: UILabel
-    var topSuitLabel, bottomSuitLabel: UILabel
+    let topValueLabel = UILabel(), bottomValueLabel = UILabel()
+    let topSuitLabel = UILabel(), bottomSuitLabel = UILabel()
     
     var card: SuitedCard? { didSet {
         didUpdateCard()
     }}
     
     
-    convenience init(card: SuitedCard) {
-        self.init(frame:CGRectZero)
+    required init(card: SuitedCard) {
         
+        let layout = UICollectionViewFlowLayout()
+        self.suitCollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
         self.card = card
-        didUpdateCard()
+        self.decorator = SuitedCardViewDecorator(collectionView: suitCollectionView, andCard: self.card)
         
+        super.init(frame: CGRectZero)
+        didUpdateCard()
+    }
+
+    required convenience init(coder: NSCoder) {
+        self.init(card:SuitedCard())
     }
     
-    override init(frame: CGRect) {
-        let layout = UICollectionViewFlowLayout()
-        suitCollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
-        topValueLabel = UILabel()
-        bottomValueLabel = UILabel()
-        topSuitLabel = UILabel()
-        bottomSuitLabel = UILabel()
-        
-        super.init(frame: frame)
-    }
+
     
     override func setup() {
         bottomSuitLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
         bottomValueLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
+        suitCollectionView.backgroundColor = UIColor.whiteColor()
         
         let font = UIFont.systemFontOfSize(UIFont.systemFontSize()*UIScreen.mainScreen().bounds.width/300)
         topValueLabel.font = font
@@ -58,6 +58,7 @@ class SuitedCardView: BaseView {
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.cornerRadius = 5
         
+        addSubview(suitCollectionView)
         addSubview(topValueLabel)
         addSubview(topSuitLabel)
         addSubview(bottomValueLabel)

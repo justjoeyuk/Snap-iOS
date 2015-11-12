@@ -33,6 +33,13 @@ extension SuitedCardView {
             make.centerX.equalTo(self.bottomSuitLabel)
         }
         
+        self.suitCollectionView.snp_makeConstraints() { make in
+            make.top.equalTo(self).offset(5)
+            make.left.equalTo(self.topSuitLabel.snp_right).offset(2)
+            make.right.equalTo(self.bottomSuitLabel.snp_left).offset(-2)
+            make.bottom.equalTo(self).offset(-5)
+        }
+        
     }
     
 }

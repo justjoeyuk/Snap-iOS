@@ -12,9 +12,9 @@
 		EF1671711BF3AFA200E38E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1671671BF3AFA200E38E86 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16716C1BF3AFA200E38E86 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		EF1671741BF3AFA200E38E86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671701BF3AFA200E38E86 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		EF1671821BF3C13400E38E86 /* card-layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* card-layouts.txt */; settings = {ASSET_TAGS = (); }; };
-		EF1671831BF3C13400E38E86 /* card-layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* card-layouts.txt */; settings = {ASSET_TAGS = (); }; };
-		EF1671841BF3C13400E38E86 /* card-layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* card-layouts.txt */; settings = {ASSET_TAGS = (); }; };
+		EF1671821BF3C13400E38E86 /* suited_card_layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* suited_card_layouts.txt */; settings = {ASSET_TAGS = (); }; };
+		EF1671831BF3C13400E38E86 /* suited_card_layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* suited_card_layouts.txt */; settings = {ASSET_TAGS = (); }; };
+		EF1671841BF3C13400E38E86 /* suited_card_layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* suited_card_layouts.txt */; settings = {ASSET_TAGS = (); }; };
 		EF16718C1BF3C28300E38E86 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF16718B1BF3C28300E38E86 /* CardTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671941BF3CD7500E38E86 /* DeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671931BF3CD7500E38E86 /* DeckTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16719C1BF3CE7A00E38E86 /* Deck.m */; settings = {ASSET_TAGS = (); }; };
@@ -28,6 +28,13 @@
 		EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A61BF3DAFD00E38E86 /* BaseView.swift */; settings = {ASSET_TAGS = (); }; };
+		EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */; settings = {ASSET_TAGS = (); }; };
+		EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */; settings = {ASSET_TAGS = (); }; };
+		EFF5B1B51BF4B6AA00523B09 /* SuitedLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */; settings = {ASSET_TAGS = (); }; };
+		EFF5B1BB1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1BA1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift */; settings = {ASSET_TAGS = (); }; };
+		EFF5B1C51BF4BF7000523B09 /* suited_card_layouts_not_enough_chars.txt in Resources */ = {isa = PBXBuildFile; fileRef = EFF5B1C11BF4BF7000523B09 /* suited_card_layouts_not_enough_chars.txt */; settings = {ASSET_TAGS = (); }; };
+		EFF5B1C71BF4BF7000523B09 /* suited_card_layouts_too_many_chars.txt in Resources */ = {isa = PBXBuildFile; fileRef = EFF5B1C31BF4BF7000523B09 /* suited_card_layouts_too_many_chars.txt */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +69,7 @@
 		EF16716F1BF3AFA200E38E86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1671701BF3AFA200E38E86 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF16717E1BF3B11400E38E86 /* Snap-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Snap-Bridging-Header.h"; sourceTree = "<group>"; };
-		EF1671811BF3C13400E38E86 /* card-layouts.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "card-layouts.txt"; sourceTree = "<group>"; };
+		EF1671811BF3C13400E38E86 /* suited_card_layouts.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = suited_card_layouts.txt; sourceTree = "<group>"; };
 		EF16718B1BF3C28300E38E86 /* CardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		EF16718E1BF3C2C000E38E86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1671901BF3C30F00E38E86 /* Snap-Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snap-Tests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -78,6 +85,15 @@
 		EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SuitedCardView+Layout.swift"; sourceTree = "<group>"; };
 		EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardView.swift; sourceTree = "<group>"; };
 		EF1671C91BF3FB2C00E38E86 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		EFF5B1AA1BF49C7E00523B09 /* SuitedCardViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCardViewDecorator.h; sourceTree = "<group>"; };
+		EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCardViewDecorator.m; sourceTree = "<group>"; };
+		EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFF5B1B11BF4A6CF00523B09 /* SuitedLayoutParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedLayoutParser.h; sourceTree = "<group>"; };
+		EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedLayoutParser.m; sourceTree = "<group>"; };
+		EFF5B1B61BF4B6BC00523B09 /* SuitedLayoutParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedLayoutParser_Private.h; sourceTree = "<group>"; };
+		EFF5B1BA1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedLayoutParserTests.swift; sourceTree = "<group>"; };
+		EFF5B1C11BF4BF7000523B09 /* suited_card_layouts_not_enough_chars.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = suited_card_layouts_not_enough_chars.txt; sourceTree = "<group>"; };
+		EFF5B1C31BF4BF7000523B09 /* suited_card_layouts_too_many_chars.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = suited_card_layouts_too_many_chars.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,9 +174,11 @@
 		EF16714B1BF3AC0A00E38E86 /* SnapTests */ = {
 			isa = PBXGroup;
 			children = (
+				EFF5B1B71BF4BC3A00523B09 /* Assets */,
 				EF16718D1BF3C2C000E38E86 /* Supporting Files */,
 				EF16718B1BF3C28300E38E86 /* CardTests.swift */,
 				EF1671931BF3CD7500E38E86 /* DeckTests.swift */,
+				EFF5B1BA1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift */,
 			);
 			path = SnapTests;
 			sourceTree = "<group>";
@@ -177,7 +195,7 @@
 		EF1671661BF3AFA200E38E86 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				EF1671811BF3C13400E38E86 /* card-layouts.txt */,
+				EF1671811BF3C13400E38E86 /* suited_card_layouts.txt */,
 				EF1671671BF3AFA200E38E86 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -311,6 +329,8 @@
 		EF1671BB1BF3F6C500E38E86 /* Suited Card */ = {
 			isa = PBXGroup;
 			children = (
+				EFF5B1A91BF49C6100523B09 /* Decorator */,
+				EFF5B1B01BF4A6BC00523B09 /* Layout Parser */,
 				EF1671BC1BF3F6C500E38E86 /* SuitedCard.h */,
 				EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */,
 			);
@@ -328,6 +348,7 @@
 		EF1671C31BF3FA4500E38E86 /* Suited Card */ = {
 			isa = PBXGroup;
 			children = (
+				EFF5B1AD1BF49FC800523B09 /* Collection View Cells */,
 				EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */,
 				EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */,
 			);
@@ -340,6 +361,42 @@
 				EF1671C91BF3FB2C00E38E86 /* BoardView.swift */,
 			);
 			path = Board;
+			sourceTree = "<group>";
+		};
+		EFF5B1A91BF49C6100523B09 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				EFF5B1AA1BF49C7E00523B09 /* SuitedCardViewDecorator.h */,
+				EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+		EFF5B1AD1BF49FC800523B09 /* Collection View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */,
+			);
+			path = "Collection View Cells";
+			sourceTree = "<group>";
+		};
+		EFF5B1B01BF4A6BC00523B09 /* Layout Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EFF5B1B61BF4B6BC00523B09 /* SuitedLayoutParser_Private.h */,
+				EFF5B1B11BF4A6CF00523B09 /* SuitedLayoutParser.h */,
+				EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */,
+			);
+			path = "Layout Parser";
+			sourceTree = "<group>";
+		};
+		EFF5B1B71BF4BC3A00523B09 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EFF5B1C11BF4BF7000523B09 /* suited_card_layouts_not_enough_chars.txt */,
+				EFF5B1C31BF4BF7000523B09 /* suited_card_layouts_too_many_chars.txt */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1671821BF3C13400E38E86 /* card-layouts.txt in Resources */,
+				EF1671821BF3C13400E38E86 /* suited_card_layouts.txt in Resources */,
 				EF1671711BF3AFA200E38E86 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +515,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1671831BF3C13400E38E86 /* card-layouts.txt in Resources */,
+				EFF5B1C51BF4BF7000523B09 /* suited_card_layouts_not_enough_chars.txt in Resources */,
+				EF1671831BF3C13400E38E86 /* suited_card_layouts.txt in Resources */,
+				EFF5B1C71BF4BF7000523B09 /* suited_card_layouts_too_many_chars.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1671841BF3C13400E38E86 /* card-layouts.txt in Resources */,
+				EF1671841BF3C13400E38E86 /* suited_card_layouts.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,13 +584,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */,
 				EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */,
 				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
 				EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */,
+				EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */,
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
 				EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */,
 				EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */,
 				EF1671C61BF3FA4500E38E86 /* SuitedCardView+Layout.swift in Sources */,
+				EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */,
 				EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */,
 				EF1671A91BF3DAFD00E38E86 /* BaseViewController.swift in Sources */,
 				EF1671BE1BF3F6C500E38E86 /* SuitedCard.m in Sources */,
@@ -544,8 +606,10 @@
 			files = (
 				EF16719E1BF3CE7A00E38E86 /* Deck.m in Sources */,
 				EF1671941BF3CD7500E38E86 /* DeckTests.swift in Sources */,
+				EFF5B1BB1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift in Sources */,
 				EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */,
 				EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */,
+				EFF5B1B51BF4B6AA00523B09 /* SuitedLayoutParser.m in Sources */,
 				EF16718C1BF3C28300E38E86 /* CardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
