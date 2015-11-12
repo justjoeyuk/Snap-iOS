@@ -67,7 +67,7 @@ class SuitedCardView: BaseView {
     }
     
     func setupTopValueLabel() {
-        topValueLabel.font = UIFont.standardScaledSystemFont()
+        topValueLabel.font = UIFont.standardScaledBoldSystemFont()
         addSubview(topValueLabel)
     }
     
@@ -78,7 +78,7 @@ class SuitedCardView: BaseView {
     }
     
     func setupBottomValueLabel() {
-        bottomValueLabel.font = UIFont.standardScaledSystemFont()
+        bottomValueLabel.font = UIFont.standardScaledBoldSystemFont()
         bottomValueLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
         
         addSubview(bottomValueLabel)
