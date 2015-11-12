@@ -6,7 +6,7 @@
 //  Copyright © 2015 Just Joey. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "Card.h"
 
 
@@ -52,6 +52,11 @@ typedef NS_ENUM(NSUInteger, SuitedCardValue) {
  @return the character for the given suit (as NSString)
  */
 + (NSString *)characterForSuit:(SuitedCardSuit)suit;
+
+/**
+ @return the colour represented by the suit
+ */
++ (UIColor *)colorForSuit:(SuitedCardSuit)suit;
 
 /**
  @return the characters for the given value

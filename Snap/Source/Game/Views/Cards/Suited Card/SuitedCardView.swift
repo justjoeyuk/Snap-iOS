@@ -80,6 +80,7 @@ class SuitedCardView: BaseView {
     func setupBottomValueLabel() {
         bottomValueLabel.font = UIFont.standardScaledSystemFont()
         bottomValueLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
+        
         addSubview(bottomValueLabel)
     }
     
@@ -95,6 +96,9 @@ class SuitedCardView: BaseView {
         self.backgroundColor = UIColor.whiteColor()
         suitCharacter = SuitedCard.characterForSuit(card!.suit)
         valueText = SuitedCard.charactersForValue(card!.value)
+        
+        bottomValueLabel.textColor = SuitedCard.colorForSuit(card!.suit)
+        topValueLabel.textColor = SuitedCard.colorForSuit(card!.suit)
         
         topValueLabel.text = "\(valueText)"
         topSuitLabel.text = "\(suitCharacter)"

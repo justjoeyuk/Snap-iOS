@@ -35,6 +35,8 @@
 }
 
 
+#pragma mark Character Values
+
 + (NSString *)characterForSuit:(SuitedCardSuit)suit
 {
     NSString *character = @"?";
@@ -60,10 +62,9 @@
 
 + (NSString *)charactersForValue:(SuitedCardValue)value
 {
-    NSUInteger rawValue = value;
     NSString *character = @"";
     
-    switch (rawValue) {
+    switch (value) {
         case Ace:
             character = @"A";
             break;
@@ -77,11 +78,35 @@
             character = @"K";
             break;
         default:
-            character = [NSString stringWithFormat:@"%d", (int)rawValue];
+            character = [NSString stringWithFormat:@"%d", (int)value];
             break;
     }
     
     return character;
+}
+
+
+#pragma mark Color Values
+
++ (UIColor *)colorForSuit:(SuitedCardSuit)suit
+{
+    UIColor *suitColor;
+    
+    switch (suit) {
+        case Clubs:
+        case Spades:
+            suitColor = [UIColor blackColor];
+            break;
+        case Hearts:
+        case Diamonds:
+            suitColor = [UIColor redColor];
+            break;
+        default:
+            suitColor = [UIColor blueColor];
+            break;
+    }
+    
+    return suitColor;
 }
 
 
