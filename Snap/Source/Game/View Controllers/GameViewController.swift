@@ -28,6 +28,7 @@ class GameViewController: BaseViewController {
         cardView.frame = CGRect(x: 70, y:70, width: width, height: height)
         
         boardView.addSubview(cardView)
+        cardView.flip()
     }
     
 }

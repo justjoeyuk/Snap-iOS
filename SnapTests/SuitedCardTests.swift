@@ -1,17 +1,16 @@
 //
-//  CardTests.swift
+//  SuitedCardTests.swift
 //  Snap
 //
-//  Created by Joey Clover on 11/11/2015.
+//  Created by Joey Clover on 12/11/2015.
 //  Copyright © 2015 Just Joey. All rights reserved.
 //
-
 import XCTest
 
 
-class CardTests: XCTestCase {
-  
-  
+class SuitedCardTests: XCTestCase {
+    
+    
     override func setUp() {
         super.setUp()
     }
@@ -20,7 +19,7 @@ class CardTests: XCTestCase {
         super.tearDown()
     }
     
-    func testThatCardsRetainsSuitsAndValues() {
+    func testThatSuitedCardsRetainsSuitsAndValues() {
         let card = SuitedCard(suit: .Hearts, andValue: .Ace)
         let expectedCard = SuitedCard(suit: .Hearts, andValue: .Ace)
         
@@ -49,6 +48,11 @@ class CardTests: XCTestCase {
         view.card = kingOfSpades
         XCTAssertEqual(view.suitCharacter, "♠")
         XCTAssertEqual(view.valueText, "K")
+    }
+    
+    func testThatSuitedCardsFlipCorrectly() {
+        let card = SuitedCard(suit: .Hearts, andValue: .Ace)
+        card.setFace(.Back)
     }
     
 }

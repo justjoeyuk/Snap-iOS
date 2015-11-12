@@ -18,6 +18,10 @@ extension SuitedCardView {
             make.edges.equalTo(self)
         }
         
+        self.backView.snp_makeConstraints() { make in
+            make.edges.equalTo(self)
+        }
+        
     }
     
 }

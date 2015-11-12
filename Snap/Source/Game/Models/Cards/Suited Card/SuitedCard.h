@@ -24,6 +24,11 @@ typedef NS_ENUM(NSUInteger, SuitedCardValue) {
     King
 };
 
+typedef NS_ENUM(NSUInteger, SuitedCardFace) {
+    Front,
+    Back
+};
+
 
 /**
  Describes the model of a standard suited card. A card in Snap typically consists
