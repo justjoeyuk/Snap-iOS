@@ -28,6 +28,7 @@
 		EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A61BF3DAFD00E38E86 /* BaseView.swift */; settings = {ASSET_TAGS = (); }; };
+		EFE304731BF5126E006E39A0 /* UIFont+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE304721BF5126E006E39A0 /* UIFont+Scaling.m */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */; settings = {ASSET_TAGS = (); }; };
@@ -85,6 +86,8 @@
 		EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SuitedCardView+Layout.swift"; sourceTree = "<group>"; };
 		EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardView.swift; sourceTree = "<group>"; };
 		EF1671C91BF3FB2C00E38E86 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		EFE304711BF511E2006E39A0 /* UIFont+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Scaling.h"; sourceTree = "<group>"; };
+		EFE304721BF5126E006E39A0 /* UIFont+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Scaling.m"; sourceTree = "<group>"; };
 		EFF5B1AA1BF49C7E00523B09 /* SuitedCardViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCardViewDecorator.h; sourceTree = "<group>"; };
 		EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCardViewDecorator.m; sourceTree = "<group>"; };
 		EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -215,6 +218,7 @@
 			children = (
 				EF16716A1BF3AFA200E38E86 /* App Delegate */,
 				EF1671A51BF3DAE800E38E86 /* Base Classes */,
+				EFE304701BF511AB006E39A0 /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -361,6 +365,15 @@
 				EF1671C91BF3FB2C00E38E86 /* BoardView.swift */,
 			);
 			path = Board;
+			sourceTree = "<group>";
+		};
+		EFE304701BF511AB006E39A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EFE304711BF511E2006E39A0 /* UIFont+Scaling.h */,
+				EFE304721BF5126E006E39A0 /* UIFont+Scaling.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EFF5B1A91BF49C6100523B09 /* Decorator */ = {
@@ -592,6 +605,7 @@
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
 				EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */,
 				EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */,
+				EFE304731BF5126E006E39A0 /* UIFont+Scaling.m in Sources */,
 				EF1671C61BF3FA4500E38E86 /* SuitedCardView+Layout.swift in Sources */,
 				EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */,
 				EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */,

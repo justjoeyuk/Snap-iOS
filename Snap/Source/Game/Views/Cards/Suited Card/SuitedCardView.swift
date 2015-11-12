@@ -26,6 +26,8 @@ class SuitedCardView: BaseView {
     }}
     
     
+    // MARK: Initialization
+    
     required init(card: SuitedCard) {
         
         let layout = UICollectionViewFlowLayout()
@@ -42,28 +44,52 @@ class SuitedCardView: BaseView {
     }
     
 
+    // MARK: Setup
     
     override func setup() {
-        bottomSuitLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
-        bottomValueLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
-        suitCollectionView.backgroundColor = UIColor.whiteColor()
-        
-        let font = UIFont.systemFontOfSize(UIFont.systemFontSize()*UIScreen.mainScreen().bounds.width/300)
-        topValueLabel.font = font
-        topSuitLabel.font = font
-        bottomValueLabel.font = font
-        bottomSuitLabel.font = font
-        
+        setupLayer()
+        setupTopSuitLabel()
+        setupTopValueLabel()
+        setupBottomSuitLabel()
+        setupBottomValueLabel()
+        setupSuitCollectionView()
+    }
+    
+    func setupLayer() {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.cornerRadius = 5
-        
-        addSubview(suitCollectionView)
-        addSubview(topValueLabel)
+    }
+    
+    func setupTopSuitLabel() {
+        topSuitLabel.font = UIFont.standardScaledSystemFont()
         addSubview(topSuitLabel)
-        addSubview(bottomValueLabel)
+    }
+    
+    func setupTopValueLabel() {
+        topValueLabel.font = UIFont.standardScaledSystemFont()
+        addSubview(topValueLabel)
+    }
+    
+    func setupBottomSuitLabel() {
+        bottomSuitLabel.font = UIFont.standardScaledSystemFont()
+        bottomSuitLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
         addSubview(bottomSuitLabel)
     }
+    
+    func setupBottomValueLabel() {
+        bottomValueLabel.font = UIFont.standardScaledSystemFont()
+        bottomValueLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
+        addSubview(bottomValueLabel)
+    }
+    
+    func setupSuitCollectionView() {
+        suitCollectionView.backgroundColor = UIColor.whiteColor()
+        addSubview(suitCollectionView)
+    }
+    
+    
+    // MARK: Card Update
     
     func didUpdateCard() {
         self.backgroundColor = UIColor.whiteColor()

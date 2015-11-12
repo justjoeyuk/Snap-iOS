@@ -4,3 +4,4 @@
 #import "Card.h"
 #import "SuitedCard.h"
 #import "SuitedCardViewDecorator.h"
+#import "UIFont+Scaling.h"
