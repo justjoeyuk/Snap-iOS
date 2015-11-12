@@ -72,6 +72,7 @@
             break;
         case Queen:
             character = @"Q";
+            break;
         case King:
             character = @"K";
             break;
