@@ -53,7 +53,7 @@
     
     if (self.card.value < Jack) {
         if ([SuitedLayoutParser suitExistsForValue:self.card.value atPosition:indexPath.item]) {
-            cell.characterLabel.text = @"♠";
+            cell.characterLabel.text = [SuitedCard characterForSuit:self.card.suit];
         }
         else {
             cell.characterLabel.text = @"";
