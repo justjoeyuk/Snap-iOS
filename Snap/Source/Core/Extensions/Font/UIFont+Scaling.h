@@ -25,4 +25,15 @@ static const CGFloat kStandardScaleFactor = 300;
  */
 + (UIFont *)standardScaledSystemFont;
 
+/**
+ @returns a bold system font with a given size that scaled with the screen size
+ */
++ (UIFont *)scaledBoldSystemFontWithSize:(CGFloat)size andScaleFactor:(CGFloat)scaleFactor;
+
+/**
+ @returns the value returned by scaledBoldSystemFontWithSize:andScaleFactor using the system font size
+ and the kStandardScaleFactor
+ */
++ (UIFont *)standardScaledBoldSystemFont;
+
 @end

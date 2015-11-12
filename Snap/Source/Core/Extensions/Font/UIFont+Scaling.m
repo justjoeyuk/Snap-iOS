@@ -22,4 +22,15 @@
     return [self scaledSystemFontWithSize:[UIFont systemFontSize] andScaleFactor:kStandardScaleFactor];
 }
 
++ (UIFont *)scaledBoldSystemFontWithSize:(CGFloat)size andScaleFactor:(CGFloat)scaleFactor
+{
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    return [UIFont boldSystemFontOfSize:size * screenSize.width / scaleFactor];
+}
+
++ (UIFont *)standardScaledBoldSystemFont
+{
+    return [self scaledBoldSystemFontWithSize:[UIFont systemFontSize] andScaleFactor:kStandardScaleFactor];
+}
+
 @end
