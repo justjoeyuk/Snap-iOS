@@ -68,29 +68,7 @@ class SuitedCardView: BaseView {
     func didUpdateCard() {
         self.backgroundColor = UIColor.whiteColor()
         suitCharacter = SuitedCard.characterForSuit(card!.suit)
-        
-        
-        let cardValue = self.card!.value.rawValue
-        let ace = SuitedCardValue.Ace.rawValue
-        let jack = SuitedCardValue.Jack.rawValue
-        let queen = SuitedCardValue.Queen.rawValue
-        let king = SuitedCardValue.King.rawValue
-        
-        switch cardValue
-        {
-        case ace:
-            valueText = "A"
-        case (2...10):
-            valueText = "\(cardValue)"
-        case jack:
-            valueText = "J"
-        case queen:
-            valueText = "Q"
-        case king:
-            valueText = "K"
-        default:
-            valueText = "?"
-        }
+        valueText = SuitedCard.charactersForValue(card!.value)
         
         topValueLabel.text = "\(valueText)"
         topSuitLabel.text = "\(suitCharacter)"

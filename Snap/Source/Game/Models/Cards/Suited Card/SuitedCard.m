@@ -58,6 +58,31 @@
     return character;
 }
 
++ (NSString *)charactersForValue:(SuitedCardValue)value
+{
+    NSUInteger rawValue = value;
+    NSString *character = @"";
+    
+    switch (rawValue) {
+        case Ace:
+            character = @"A";
+            break;
+        case Jack:
+            character = @"J";
+            break;
+        case Queen:
+            character = @"Q";
+        case King:
+            character = @"K";
+            break;
+        default:
+            character = [NSString stringWithFormat:@"%ld", rawValue];
+            break;
+    }
+    
+    return character;
+}
+
 
 #pragma mark NSCopying
 
