@@ -77,7 +77,7 @@
             character = @"K";
             break;
         default:
-            character = [NSString stringWithFormat:@"%ld", rawValue];
+            character = [NSString stringWithFormat:@"%d", (int)rawValue];
             break;
     }
     

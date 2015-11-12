@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8E4455863A89BB603854DE77 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AACD01601302F6EECB34D71 /* Pods.framework */; };
-		EF1671581BF3AC0A00E38E86 /* SnapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671571BF3AC0A00E38E86 /* SnapUITests.m */; };
 		EF1671711BF3AFA200E38E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1671671BF3AFA200E38E86 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16716C1BF3AFA200E38E86 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		EF1671741BF3AFA200E38E86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671701BF3AFA200E38E86 /* main.m */; settings = {ASSET_TAGS = (); }; };
@@ -28,7 +27,8 @@
 		EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A61BF3DAFD00E38E86 /* BaseView.swift */; settings = {ASSET_TAGS = (); }; };
-		EFE304731BF5126E006E39A0 /* UIFont+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE304721BF5126E006E39A0 /* UIFont+Scaling.m */; settings = {ASSET_TAGS = (); }; };
+		EFE304771BF5173D006E39A0 /* UIFont+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE304761BF5173D006E39A0 /* UIFont+Scaling.m */; settings = {ASSET_TAGS = (); }; };
+		EFE3047B1BF5176B006E39A0 /* NSString+Whitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3047A1BF5176B006E39A0 /* NSString+Whitespace.m */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */; settings = {ASSET_TAGS = (); }; };
@@ -62,7 +62,6 @@
 		EF16712F1BF3AC0900E38E86 /* Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1671481BF3AC0A00E38E86 /* SnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1671531BF3AC0A00E38E86 /* SnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF1671571BF3AC0A00E38E86 /* SnapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapUITests.m; sourceTree = "<group>"; };
 		EF1671591BF3AC0A00E38E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1671671BF3AFA200E38E86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF16716B1BF3AFA200E38E86 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,8 +85,10 @@
 		EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SuitedCardView+Layout.swift"; sourceTree = "<group>"; };
 		EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardView.swift; sourceTree = "<group>"; };
 		EF1671C91BF3FB2C00E38E86 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
-		EFE304711BF511E2006E39A0 /* UIFont+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Scaling.h"; sourceTree = "<group>"; };
-		EFE304721BF5126E006E39A0 /* UIFont+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Scaling.m"; sourceTree = "<group>"; };
+		EFE304751BF5173D006E39A0 /* UIFont+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Scaling.h"; sourceTree = "<group>"; };
+		EFE304761BF5173D006E39A0 /* UIFont+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Scaling.m"; sourceTree = "<group>"; };
+		EFE304791BF5176B006E39A0 /* NSString+Whitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Whitespace.h"; sourceTree = "<group>"; };
+		EFE3047A1BF5176B006E39A0 /* NSString+Whitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Whitespace.m"; sourceTree = "<group>"; };
 		EFF5B1AA1BF49C7E00523B09 /* SuitedCardViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCardViewDecorator.h; sourceTree = "<group>"; };
 		EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCardViewDecorator.m; sourceTree = "<group>"; };
 		EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -189,7 +190,6 @@
 		EF1671561BF3AC0A00E38E86 /* SnapUITests */ = {
 			isa = PBXGroup;
 			children = (
-				EF1671571BF3AC0A00E38E86 /* SnapUITests.m */,
 				EF1671591BF3AC0A00E38E86 /* Info.plist */,
 			);
 			path = SnapUITests;
@@ -370,10 +370,28 @@
 		EFE304701BF511AB006E39A0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EFE304711BF511E2006E39A0 /* UIFont+Scaling.h */,
-				EFE304721BF5126E006E39A0 /* UIFont+Scaling.m */,
+				EFE304781BF5174C006E39A0 /* String */,
+				EFE304741BF5173D006E39A0 /* Font */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EFE304741BF5173D006E39A0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EFE304751BF5173D006E39A0 /* UIFont+Scaling.h */,
+				EFE304761BF5173D006E39A0 /* UIFont+Scaling.m */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		EFE304781BF5174C006E39A0 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				EFE304791BF5176B006E39A0 /* NSString+Whitespace.h */,
+				EFE3047A1BF5176B006E39A0 /* NSString+Whitespace.m */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		EFF5B1A91BF49C6100523B09 /* Decorator */ = {
@@ -605,8 +623,9 @@
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
 				EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */,
 				EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */,
-				EFE304731BF5126E006E39A0 /* UIFont+Scaling.m in Sources */,
+				EFE3047B1BF5176B006E39A0 /* NSString+Whitespace.m in Sources */,
 				EF1671C61BF3FA4500E38E86 /* SuitedCardView+Layout.swift in Sources */,
+				EFE304771BF5173D006E39A0 /* UIFont+Scaling.m in Sources */,
 				EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */,
 				EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */,
 				EF1671A91BF3DAFD00E38E86 /* BaseViewController.swift in Sources */,
@@ -632,7 +651,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF1671581BF3AC0A00E38E86 /* SnapUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,9 +32,4 @@
  */
 + (BOOL)suitExistsForValue:(SuitedCardValue)value atPosition:(NSUInteger)position forLayouts:(NSArray *)layouts;
 
-/**
- Removes whitespace from the given string
- */
-+ (NSString *)stripString:(NSString *)string;
-
 @end

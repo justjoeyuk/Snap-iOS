@@ -8,6 +8,7 @@
 
 #import "SuitedLayoutParser.h"
 #import "SuitedLayoutParser_Private.h"
+#import "NSString+Whitespace.h"
 
 
 @interface SuitedLayoutParser()
@@ -18,6 +19,9 @@
 
 
 @implementation SuitedLayoutParser
+
+
+#pragma mark - Suit Checking
 
 + (BOOL)suitExistsForValue:(SuitedCardValue)value atPosition:(NSUInteger)position;
 {
@@ -37,6 +41,8 @@
     return suitAtPosition;
 }
 
+
+#pragma mark - Layout Parsing
 
 + (const NSArray *)layouts
 {
@@ -85,13 +91,6 @@
     return fullLayout;
 }
 
-
-+ (NSString *)stripString:(NSString *)string
-{
-    return [[string stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-}
-
-
 + (NSArray *)parseLayoutFile:(NSString *)filename ofType:(NSString *)filetype error:(NSError **)error
 {
     NSString* filePath = [[NSBundle mainBundle] pathForResource:filename
@@ -106,7 +105,7 @@
                                                   encoding:NSUTF8StringEncoding
                                                      error:NULL];
     
-    NSString* strippedContent = [self stripString:content];
+    NSString* strippedContent = [content stringByStrippingWhitespace];
     
     NSArray *layouts = [self parseString:strippedContent error:error];
     return layouts;
