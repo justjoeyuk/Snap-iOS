@@ -12,14 +12,11 @@ import UIKit
 
 class SuitedCardView: BaseView {
     
-    var decorator: SuitedCardViewDecorator?
-    var suitCollectionView: UICollectionView
+    var frontView: SuitedCardFrontView
+    var frontDecorator: SuitedCardViewDecorator?
     
     var suitCharacter:String = "?"
     var valueText:String = "??"
-    
-    let topValueLabel = UILabel(), bottomValueLabel = UILabel()
-    let topSuitLabel = UILabel(), bottomSuitLabel = UILabel()
     
     var card: SuitedCard? { didSet {
         didUpdateCard()
@@ -29,11 +26,9 @@ class SuitedCardView: BaseView {
     // MARK: Initialization
     
     required init(card: SuitedCard) {
-        
-        let layout = UICollectionViewFlowLayout()
-        self.suitCollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
+        self.frontView = SuitedCardFrontView()
         self.card = card
-        self.decorator = SuitedCardViewDecorator(collectionView: suitCollectionView, andCard: self.card)
+        self.frontDecorator = SuitedCardViewDecorator(collectionView: frontView.suitCollectionView, andCard: self.card)
         
         super.init(frame: CGRectZero)
         didUpdateCard()
@@ -48,63 +43,36 @@ class SuitedCardView: BaseView {
     
     override func setup() {
         setupLayer()
-        setupTopSuitLabel()
-        setupTopValueLabel()
-        setupBottomSuitLabel()
-        setupBottomValueLabel()
-        setupSuitCollectionView()
+        setupFrontView()
     }
     
     func setupLayer() {
+        self.clipsToBounds = true
+        
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.cornerRadius = 5
     }
     
-    func setupTopSuitLabel() {
-        topSuitLabel.font = UIFont.standardScaledSystemFont()
-        addSubview(topSuitLabel)
-    }
-    
-    func setupTopValueLabel() {
-        topValueLabel.font = UIFont.standardScaledBoldSystemFont()
-        addSubview(topValueLabel)
-    }
-    
-    func setupBottomSuitLabel() {
-        bottomSuitLabel.font = UIFont.standardScaledSystemFont()
-        bottomSuitLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
-        addSubview(bottomSuitLabel)
-    }
-    
-    func setupBottomValueLabel() {
-        bottomValueLabel.font = UIFont.standardScaledBoldSystemFont()
-        bottomValueLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
-        
-        addSubview(bottomValueLabel)
-    }
-    
-    func setupSuitCollectionView() {
-        suitCollectionView.backgroundColor = UIColor.whiteColor()
-        addSubview(suitCollectionView)
+    func setupFrontView() {
+        self.addSubview(frontView)
     }
     
     
     // MARK: Card Update
     
     func didUpdateCard() {
-        self.backgroundColor = UIColor.whiteColor()
         suitCharacter = SuitedCard.characterForSuit(card!.suit)
         valueText = SuitedCard.charactersForValue(card!.value)
         
-        bottomValueLabel.textColor = SuitedCard.colorForSuit(card!.suit)
-        topValueLabel.textColor = SuitedCard.colorForSuit(card!.suit)
+        frontView.bottomValueLabel.textColor = SuitedCard.colorForSuit(card!.suit)
+        frontView.topValueLabel.textColor = SuitedCard.colorForSuit(card!.suit)
         
-        topValueLabel.text = "\(valueText)"
-        topSuitLabel.text = "\(suitCharacter)"
+        frontView.topValueLabel.text = "\(valueText)"
+        frontView.topSuitLabel.text = "\(suitCharacter)"
         
-        bottomValueLabel.text = "\(valueText)"
-        bottomSuitLabel.text = "\(suitCharacter)"
+        frontView.bottomValueLabel.text = "\(valueText)"
+        frontView.bottomSuitLabel.text = "\(suitCharacter)"
     }
     
 }
