@@ -8,6 +8,7 @@
 
 #import "SuitedCardViewDecorator.h"
 #import "SuitedLayoutParser.h"
+#import "SuitedCard.h"
 #import "Snap-Swift.h"
 
 
@@ -41,7 +42,8 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 21;
+    // columns * rows
+    return 3 * 7;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -49,11 +51,13 @@
     NSString *identifier = [SuitedCardCollectionViewCell identifier];
     SuitedCardCollectionViewCell *cell = (SuitedCardCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    if ([SuitedLayoutParser suitExistsForValue:self.card.value atPosition:indexPath.item]) {
-        cell.characterLabel.text = @"♠";
-    }
-    else {
-        cell.characterLabel.text = @"";
+    if (self.card.value < Jack) {
+        if ([SuitedLayoutParser suitExistsForValue:self.card.value atPosition:indexPath.item]) {
+            cell.characterLabel.text = @"♠";
+        }
+        else {
+            cell.characterLabel.text = @"";
+        }
     }
     
     return cell;

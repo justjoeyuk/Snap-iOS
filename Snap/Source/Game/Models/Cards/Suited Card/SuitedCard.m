@@ -35,6 +35,29 @@
 }
 
 
++ (NSString *)characterForSuit:(SuitedCardSuit)suit
+{
+    NSString *character = @"?";
+    
+    switch (suit)
+    {
+    case Clubs:
+        character = @"♣";
+            break;
+    case Diamonds:
+        character = @"♦";
+            break;
+    case Hearts:
+        character = @"♥";
+            break;
+    case Spades:
+        character = @"♠";
+            break;
+    }
+    
+    return character;
+}
+
 
 #pragma mark NSCopying
 

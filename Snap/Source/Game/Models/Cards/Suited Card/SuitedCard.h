@@ -48,4 +48,9 @@ typedef NS_ENUM(NSUInteger, SuitedCardValue) {
  */
 - (instancetype)initWithSuit:(SuitedCardSuit)suit andValue:(SuitedCardValue)value;
 
+/**
+ @return the character for the given suit
+ */
++ (NSString *)characterForSuit:(SuitedCardSuit)suit;
+
 @end

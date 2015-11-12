@@ -15,7 +15,7 @@ class SuitedCardView: BaseView {
     var decorator: SuitedCardViewDecorator?
     var suitCollectionView: UICollectionView
     
-    var suitCharacter:Character = "?"
+    var suitCharacter:String = "?"
     var valueText:String = "??"
     
     let topValueLabel = UILabel(), bottomValueLabel = UILabel()
@@ -67,18 +67,7 @@ class SuitedCardView: BaseView {
     
     func didUpdateCard() {
         self.backgroundColor = UIColor.whiteColor()
-        
-        switch self.card!.suit
-        {
-        case .Clubs:
-            suitCharacter = "♣"
-        case .Diamonds:
-            suitCharacter = "♦"
-        case .Hearts:
-            suitCharacter = "♥"
-        case.Spades:
-            suitCharacter = "♠"
-        }
+        suitCharacter = SuitedCard.characterForSuit(card!.suit)
         
         
         let cardValue = self.card!.value.rawValue
