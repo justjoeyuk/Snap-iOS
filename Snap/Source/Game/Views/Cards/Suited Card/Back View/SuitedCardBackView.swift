@@ -12,7 +12,7 @@ import UIKit
 class SuitedCardBackView: BaseView {
     
     override func setup() {
-        self.backgroundColor = UIColor.blackColor()
+        self.backgroundColor = UIColor(patternImage: UIImage(named: "Suited Background Image")!)
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.cornerRadius = 5
