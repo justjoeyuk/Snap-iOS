@@ -13,6 +13,7 @@ import UIKit
 class GameViewController: BaseViewController {
     
     var boardView: BoardView { return self.view as! BoardView }
+    var cardView: SuitedCardView!
     
     
     override func loadView() {
@@ -21,13 +22,17 @@ class GameViewController: BaseViewController {
     
     override func setup() {
         let card = SuitedCard(suit: .Diamonds, andValue: .Ace)
-        let cardView = SuitedCardView(card: card)
+        cardView = SuitedCardView(card: card, initialFace: .Back)
         
         let width = UIScreen.mainScreen().bounds.width / 2
         let height = width / 0.7
         cardView.frame = CGRect(x: 70, y:70, width: width, height: height)
         
         boardView.addSubview(cardView)
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
         cardView.flip()
     }
     

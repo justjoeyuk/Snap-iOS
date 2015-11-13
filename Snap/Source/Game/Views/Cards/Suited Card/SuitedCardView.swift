@@ -10,11 +10,20 @@ import Foundation
 import UIKit
 
 
+/** Contains directions in which to flip the card view from */
+enum SuitedCardFlipDirection {
+    case FromTop
+    case FromLeft
+    case FromRight
+    case FromBottom
+}
+
+
 class SuitedCardView: BaseView {
     
-    var frontView: SuitedCardFrontView
-    var backView: SuitedCardBackView
-    var frontDecorator: SuitedCardViewDecorator?
+    private var frontView: SuitedCardFrontView
+    private var backView: SuitedCardBackView
+    private var frontDecorator: SuitedCardViewDecorator?
     
     var suitCharacter:String = "?"
     var valueText:String = "??"
@@ -58,10 +67,7 @@ class SuitedCardView: BaseView {
     
     func setupLayer() {
         self.clipsToBounds = true
-        
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.blackColor().CGColor
-        self.layer.cornerRadius = 5
+        self.backgroundColor = UIColor.clearColor()
     }
     
     func setupFrontView() {
@@ -93,27 +99,25 @@ class SuitedCardView: BaseView {
     // MARK: Face Update
     
     func updateFace(newFace:SuitedCardFace?) {
-        if (newFace == self.face || newFace == nil) { return }
-        if (face == nil) { showFace(newFace!); return }
-        
-        flip()
+        if (newFace == nil) { return }
+        showFace(newFace!)
     }
     
     private func showFace(face:SuitedCardFace) {
         switch face {
         case .Front:
-            self.frontView.alpha = 1
-            self.backView.alpha = 0
+            self.frontView.hidden = false
+            self.backView.hidden = true
         case .Back:
-            self.frontView.alpha = 0
-            self.backView.alpha = 1
+            self.frontView.hidden = true
+            self.backView.hidden = false
         }
     }
     
     func flip() {
-        guard let face = self.face else { return }
+        if self.face == nil { return }
         
-        switch face {
+        switch self.face! {
         case .Front:
             animateToFace(.Back)
         case .Back:
@@ -122,19 +126,31 @@ class SuitedCardView: BaseView {
     }
     
     private func animateToFace(face:SuitedCardFace) {
+        self.face = face
         
-        UIView.animateWithDuration(2){
+        self.frontView.hidden = true
+        self.backView.hidden = false
         
-        if face == .Front {
-            self.frontView.alpha = 1
-            self.backView.alpha = 0
+        UIView.transitionFromView(self.backView, toView: self.frontView, duration: 0.6, options: [.ShowHideTransitionViews, .TransitionFlipFromTop, .CurveLinear], completion: nil)
+    }
+    
+}
+
+
+// MARK: Layout
+
+extension SuitedCardView {
+    
+    override func setupConstraints() {
+        
+        self.frontView.snp_remakeConstraints() { make in
+            make.edges.equalTo(self)
         }
-        else {
-            self.frontView.alpha = 0
-            self.backView.alpha = 1
+        
+        self.backView.snp_remakeConstraints() { make in
+            make.edges.equalTo(self)
         }
-            
-        }
+        
     }
     
 }

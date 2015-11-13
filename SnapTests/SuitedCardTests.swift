@@ -52,7 +52,17 @@ class SuitedCardTests: XCTestCase {
     
     func testThatSuitedCardsFlipCorrectly() {
         let card = SuitedCard(suit: .Hearts, andValue: .Ace)
-        card.setFace(.Back)
+        let suitedCardView = SuitedCardView(card: card, initialFace: SuitedCardFace.Front)
+        
+        XCTAssertEqual(suitedCardView.face, SuitedCardFace.Front)
+        
+        suitedCardView.flip()
+        
+        XCTAssertEqual(suitedCardView.face, .Back)
+        
+        suitedCardView.flip()
+        
+        XCTAssertEqual(suitedCardView.face, .Front)
     }
     
 }

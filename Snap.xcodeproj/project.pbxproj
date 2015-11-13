@@ -20,7 +20,6 @@
 		EF1671A91BF3DAFD00E38E86 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A71BF3DAFD00E38E86 /* BaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671AB1BF3DF6B00E38E86 /* GameViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671BE1BF3F6C500E38E86 /* SuitedCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */; settings = {ASSET_TAGS = (); }; };
-		EF1671C61BF3FA4500E38E86 /* SuitedCardView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C91BF3FB2C00E38E86 /* BoardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -28,7 +27,6 @@
 		EFE304771BF5173D006E39A0 /* UIFont+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE304761BF5173D006E39A0 /* UIFont+Scaling.m */; settings = {ASSET_TAGS = (); }; };
 		EFE3047B1BF5176B006E39A0 /* NSString+Whitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3047A1BF5176B006E39A0 /* NSString+Whitespace.m */; settings = {ASSET_TAGS = (); }; };
 		EFE3048A1BF5245F006E39A0 /* SuitedCardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304891BF5245F006E39A0 /* SuitedCardFrontView.swift */; settings = {ASSET_TAGS = (); }; };
-		EFE3048C1BF52699006E39A0 /* SuitedCardFrontView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3048B1BF52699006E39A0 /* SuitedCardFrontView+Layout.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE3048D1BF52795006E39A0 /* SuitedCardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304891BF5245F006E39A0 /* SuitedCardFrontView.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304901BF52813006E39A0 /* SuitedCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304911BF52813006E39A0 /* SuitedCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -76,7 +74,6 @@
 		EF1671BC1BF3F6C500E38E86 /* SuitedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCard.h; sourceTree = "<group>"; };
 		EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCard.m; sourceTree = "<group>"; };
 		EF1671BF1BF3F6F100E38E86 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SuitedCardView+Layout.swift"; sourceTree = "<group>"; };
 		EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardView.swift; sourceTree = "<group>"; };
 		EF1671C91BF3FB2C00E38E86 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		EFE304751BF5173D006E39A0 /* UIFont+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Scaling.h"; sourceTree = "<group>"; };
@@ -85,7 +82,6 @@
 		EFE3047A1BF5176B006E39A0 /* NSString+Whitespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Whitespace.m"; sourceTree = "<group>"; };
 		EFE304871BF519C2006E39A0 /* SnapUITests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SnapUITests copy-Info.plist"; path = "/Users/joeyclover/Desktop/Lad Bible/iOS/SnapUITests copy-Info.plist"; sourceTree = "<absolute>"; };
 		EFE304891BF5245F006E39A0 /* SuitedCardFrontView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardFrontView.swift; sourceTree = "<group>"; };
-		EFE3048B1BF52699006E39A0 /* SuitedCardFrontView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SuitedCardFrontView+Layout.swift"; sourceTree = "<group>"; };
 		EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardBackView.swift; sourceTree = "<group>"; };
 		EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardTests.swift; sourceTree = "<group>"; };
 		EFF5B1AA1BF49C7E00523B09 /* SuitedCardViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCardViewDecorator.h; sourceTree = "<group>"; };
@@ -339,7 +335,6 @@
 				EFE3048E1BF52803006E39A0 /* Back View */,
 				EFF5B1AD1BF49FC800523B09 /* Collection View Cells */,
 				EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */,
-				EF1671C41BF3FA4500E38E86 /* SuitedCardView+Layout.swift */,
 			);
 			path = "Suited Card";
 			sourceTree = "<group>";
@@ -383,7 +378,6 @@
 			isa = PBXGroup;
 			children = (
 				EFE304891BF5245F006E39A0 /* SuitedCardFrontView.swift */,
-				EFE3048B1BF52699006E39A0 /* SuitedCardFrontView+Layout.swift */,
 			);
 			path = "Front View";
 			sourceTree = "<group>";
@@ -589,7 +583,6 @@
 				EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */,
 				EFE304901BF52813006E39A0 /* SuitedCardBackView.swift in Sources */,
 				EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */,
-				EFE3048C1BF52699006E39A0 /* SuitedCardFrontView+Layout.swift in Sources */,
 				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
 				EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */,
 				EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */,
@@ -598,7 +591,6 @@
 				EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */,
 				EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */,
 				EFE3047B1BF5176B006E39A0 /* NSString+Whitespace.m in Sources */,
-				EF1671C61BF3FA4500E38E86 /* SuitedCardView+Layout.swift in Sources */,
 				EFE304771BF5173D006E39A0 /* UIFont+Scaling.m in Sources */,
 				EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */,
 				EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */,
