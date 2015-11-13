@@ -15,7 +15,7 @@ class GameViewController: BaseViewController {
     var boardView: BoardView { return self.view as! BoardView }
     var deck: SuitedDeck
     var snapTimer: NSTimer
-    var arr: Array<SuitedCardView> = []
+    var lastFourCardViews: Array<SuitedCardView> = []
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -30,7 +30,7 @@ class GameViewController: BaseViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        snapTimer = NSTimer(timeInterval: 4, target: self, selector: "turnCard", userInfo: nil, repeats: true)
+        snapTimer = NSTimer(timeInterval: 0.2, target: self, selector: "turnCard", userInfo: nil, repeats: true)
         
         turnCard()
         NSRunLoop.currentRunLoop().addTimer(snapTimer, forMode:NSRunLoopCommonModes)
@@ -42,9 +42,26 @@ class GameViewController: BaseViewController {
     }
     
     func turnCard() {
+        
+        if (lastFourCardViews.count == 4) { removeOldestCardView() }
+        if (deck.getTopCard() == nil) { return } // DECK EMPTY
+        
         let card = deck.getTopCard() as! SuitedCard
         let cardView = SuitedCardView(card: card, initialFace: .Back)
         
+        self.presentCardView(cardView)
+        
+    }
+    
+    private func removeOldestCardView() {
+        let oldestCardView = lastFourCardViews.first!
+        oldestCardView.removeFromSuperview()
+        oldestCardView.card = nil
+        
+        lastFourCardViews.removeFirst()
+    }
+    
+    private func presentCardView(cardView:SuitedCardView) {
         let initialWidth = UIScreen.mainScreen().bounds.width / 1.5
         let initialHeight = initialWidth / 0.7
         
@@ -58,8 +75,9 @@ class GameViewController: BaseViewController {
             cardView.frame = endFrame
         })
         
-        arr.append(cardView)
         boardView.addSubview(cardView)
+        lastFourCardViews.append(cardView)
+        
         cardView.flip()
     }
     

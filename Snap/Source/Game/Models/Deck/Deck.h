@@ -24,7 +24,7 @@
 /** Initializes the Deck with a capacity */
 - (instancetype)initWithCapacity:(NSUInteger)deckSize;
 
-/** Retrieves the last card added to the deck (FIFO) */
+/** Retrieves the last card added to the deck (FIFO) and removes it from the deck */
 - (id<Card>)getTopCard;
 
 /** Adds a full set of suited cards to the deck */

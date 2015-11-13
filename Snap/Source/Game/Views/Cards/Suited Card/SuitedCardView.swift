@@ -86,6 +86,8 @@ class SuitedCardView: BaseView {
     // MARK: Card Update
     
     func didUpdateCard() {
+        if self.card == nil { return }
+        
         suitCharacter = SuitedCard.characterForSuit(card!.suit)
         valueText = SuitedCard.charactersForValue(card!.value)
         
