@@ -32,6 +32,9 @@
 		EFE304911BF52813006E39A0 /* SuitedCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304931BF5284F006E39A0 /* SuitedCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304951BF574D1006E39A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304941BF574D1006E39A0 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		EFE304961BF57CD8006E39A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304941BF574D1006E39A0 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		EFE3049A1BF57E8C006E39A0 /* SuitedDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE304991BF57E8C006E39A0 /* SuitedDeck.m */; settings = {ASSET_TAGS = (); }; };
+		EFE3049D1BF58302006E39A0 /* SuitedDeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3049C1BF58302006E39A0 /* SuitedDeckTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */; settings = {ASSET_TAGS = (); }; };
@@ -86,6 +89,10 @@
 		EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardBackView.swift; sourceTree = "<group>"; };
 		EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardTests.swift; sourceTree = "<group>"; };
 		EFE304941BF574D1006E39A0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EFE304981BF57E8C006E39A0 /* SuitedDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedDeck.h; sourceTree = "<group>"; };
+		EFE304991BF57E8C006E39A0 /* SuitedDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedDeck.m; sourceTree = "<group>"; };
+		EFE3049B1BF57FDA006E39A0 /* Deck_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck_Private.h; sourceTree = "<group>"; };
+		EFE3049C1BF58302006E39A0 /* SuitedDeckTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedDeckTests.swift; sourceTree = "<group>"; };
 		EFF5B1AA1BF49C7E00523B09 /* SuitedCardViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCardViewDecorator.h; sourceTree = "<group>"; };
 		EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCardViewDecorator.m; sourceTree = "<group>"; };
 		EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -172,6 +179,7 @@
 				EF1671931BF3CD7500E38E86 /* DeckTests.swift */,
 				EFF5B1BA1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift */,
 				EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */,
+				EFE3049C1BF58302006E39A0 /* SuitedDeckTests.swift */,
 			);
 			path = SnapTests;
 			sourceTree = "<group>";
@@ -271,8 +279,10 @@
 		EF1671981BF3CE5500E38E86 /* Deck */ = {
 			isa = PBXGroup;
 			children = (
+				EFE304971BF57E78006E39A0 /* Suited */,
 				EF16719B1BF3CE7A00E38E86 /* Deck.h */,
 				EF16719C1BF3CE7A00E38E86 /* Deck.m */,
+				EFE3049B1BF57FDA006E39A0 /* Deck_Private.h */,
 			);
 			path = Deck;
 			sourceTree = "<group>";
@@ -391,6 +401,15 @@
 				EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */,
 			);
 			path = "Back View";
+			sourceTree = "<group>";
+		};
+		EFE304971BF57E78006E39A0 /* Suited */ = {
+			isa = PBXGroup;
+			children = (
+				EFE304981BF57E8C006E39A0 /* SuitedDeck.h */,
+				EFE304991BF57E8C006E39A0 /* SuitedDeck.m */,
+			);
+			path = Suited;
 			sourceTree = "<group>";
 		};
 		EFF5B1A91BF49C6100523B09 /* Decorator */ = {
@@ -593,6 +612,7 @@
 				EFE3048A1BF5245F006E39A0 /* SuitedCardFrontView.swift in Sources */,
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
 				EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */,
+				EFE3049A1BF57E8C006E39A0 /* SuitedDeck.m in Sources */,
 				EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */,
 				EFE3047B1BF5176B006E39A0 /* NSString+Whitespace.m in Sources */,
 				EFE304771BF5173D006E39A0 /* UIFont+Scaling.m in Sources */,
@@ -607,11 +627,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE3049D1BF58302006E39A0 /* SuitedDeckTests.swift in Sources */,
 				EFE3048D1BF52795006E39A0 /* SuitedCardFrontView.swift in Sources */,
 				EFE304911BF52813006E39A0 /* SuitedCardBackView.swift in Sources */,
 				EF16719E1BF3CE7A00E38E86 /* Deck.m in Sources */,
 				EFE304931BF5284F006E39A0 /* SuitedCardTests.swift in Sources */,
 				EF1671941BF3CD7500E38E86 /* DeckTests.swift in Sources */,
+				EFE304961BF57CD8006E39A0 /* Constants.swift in Sources */,
 				EFF5B1BB1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift in Sources */,
 				EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */,
 				EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */,

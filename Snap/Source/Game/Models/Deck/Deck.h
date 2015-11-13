@@ -24,8 +24,11 @@
 /** Initializes the Deck with a capacity */
 - (instancetype)initWithCapacity:(NSUInteger)deckSize;
 
+/** Retrieves the last card added to the deck (FIFO) */
+- (id<Card>)getTopCard;
+
 /** Adds a full set of suited cards to the deck */
-- (void)fillWithSuitedCards;
+- (void)fillWithCards;
 
 /** Shuffles all the cards randomly in the deck */
 - (void)shuffleCards;

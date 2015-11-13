@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface SuitedLayoutParser (Private)
+@interface SuitedLayoutParser ()
 
 /**
  Parses a given file (from string) into a nested array of boolean by substituting the

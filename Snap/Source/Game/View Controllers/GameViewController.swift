@@ -31,9 +31,4 @@ class GameViewController: BaseViewController {
         boardView.addSubview(cardView)
     }
     
-    
-    override func viewDidAppear(animated: Bool) {
-        
-    }
-    
 }

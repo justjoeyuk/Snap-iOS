@@ -6,16 +6,9 @@
 //  Copyright © 2015 Just Joey. All rights reserved.
 //
 
-#import "Deck.h"
+#import "Deck_Private.h"
 #import "Card.h"
 #import "SuitedCard.h"
-
-
-@interface Deck()
-
-@property (strong, nonatomic) NSMutableArray *cards;
-
-@end
 
 
 @implementation Deck
@@ -43,16 +36,26 @@
 }
 
 
+#pragma mark Get Cards
+
+- (id<Card>)getTopCard
+{
+    id<Card> card = [self.cards lastObject];
+    [self.cards removeLastObject];
+    
+    return card;
+}
+
+
 #pragma mark Deck Manipulation
 
-- (void)fillWithSuitedCards
+- (void)fillWithCards
 {
-    for (int suit = 1; suit <= 4; suit++) {
-        for (int value = 1; value <= 13; value++) {
-             SuitedCard *newCard = [[SuitedCard alloc] initWithSuit:suit andValue:value];
-            [self addCard:newCard];
-        }
-    }
+}
+
+- (void)removeAllCards
+{
+    [self.cards removeAllObjects];
 }
 
 - (void)shuffleCards
