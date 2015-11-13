@@ -21,8 +21,8 @@ class GameViewController: BaseViewController {
     }
     
     override func setup() {
-        let card = SuitedCard(suit: .Diamonds, andValue: .Ace)
-        cardView = SuitedCardView(card: card, initialFace: .Back)
+        let card = SuitedCard(suit: .Diamonds, andValue: SuitedCardValue(rawValue: 5)!)
+        cardView = SuitedCardView(card: card, initialFace: .Front)
         
         let width = UIScreen.mainScreen().bounds.width / 2
         let height = width / 0.7
@@ -33,7 +33,7 @@ class GameViewController: BaseViewController {
     
     
     override func viewDidAppear(animated: Bool) {
-        cardView.flip()
+        
     }
     
 }

@@ -31,6 +31,7 @@
 		EFE304901BF52813006E39A0 /* SuitedCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304911BF52813006E39A0 /* SuitedCardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304931BF5284F006E39A0 /* SuitedCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */; settings = {ASSET_TAGS = (); }; };
+		EFE304951BF574D1006E39A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304941BF574D1006E39A0 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */; settings = {ASSET_TAGS = (); }; };
@@ -84,6 +85,7 @@
 		EFE304891BF5245F006E39A0 /* SuitedCardFrontView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardFrontView.swift; sourceTree = "<group>"; };
 		EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardBackView.swift; sourceTree = "<group>"; };
 		EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardTests.swift; sourceTree = "<group>"; };
+		EFE304941BF574D1006E39A0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EFF5B1AA1BF49C7E00523B09 /* SuitedCardViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCardViewDecorator.h; sourceTree = "<group>"; };
 		EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCardViewDecorator.m; sourceTree = "<group>"; };
 		EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				EF16717D1BF3B11400E38E86 /* Bridging */,
 				EF16716E1BF3AFA200E38E86 /* Configuration */,
 				EF1671701BF3AFA200E38E86 /* main.m */,
+				EFE304941BF574D1006E39A0 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */,
+				EFE304951BF574D1006E39A0 /* Constants.swift in Sources */,
 				EFE304901BF52813006E39A0 /* SuitedCardBackView.swift in Sources */,
 				EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */,
 				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
