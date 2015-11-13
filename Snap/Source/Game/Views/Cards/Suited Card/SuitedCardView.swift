@@ -173,7 +173,8 @@ class SuitedCardView: BaseView {
             transitionAnimation = .TransitionNone
         }
         
-        UIView.transitionFromView(fromView, toView: toView, duration: 0.6, options: [.ShowHideTransitionViews, transitionAnimation, .CurveLinear], completion: completion)
+        CATransaction.flush()
+        UIView.transitionFromView(fromView, toView: toView, duration: 0.8, options: [.ShowHideTransitionViews, transitionAnimation, .CurveLinear], completion: completion)
     }
     
 }
