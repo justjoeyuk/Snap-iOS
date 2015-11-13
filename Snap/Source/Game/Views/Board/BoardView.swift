@@ -13,7 +13,7 @@ import UIKit
 class BoardView: BaseView {
     
     override func setup() {
-        self.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
+        self.backgroundColor = UIColor(patternImage: UIImage(named: "Table Texture Image")!)
     }
     
 }

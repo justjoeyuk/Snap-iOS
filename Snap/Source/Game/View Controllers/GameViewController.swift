@@ -45,9 +45,18 @@ class GameViewController: BaseViewController {
         let card = deck.getTopCard() as! SuitedCard
         let cardView = SuitedCardView(card: card, initialFace: .Back)
         
+        let initialWidth = UIScreen.mainScreen().bounds.width / 1.5
+        let initialHeight = initialWidth / 0.7
+        
         let width = UIScreen.mainScreen().bounds.width / 2
         let height = width / 0.7
-        cardView.frame = CGRect(x: 70, y:70, width: width, height: height)
+        
+        cardView.frame = CGRect(x: -initialWidth, y:(self.view.center.y-initialHeight/2), width: initialWidth, height: initialHeight)
+        let endFrame = CGRect(x: (self.view.center.x-width/2), y: (self.view.center.y-height/2), width: width, height: height)
+        
+        UIView.animateWithDuration(0.8, animations: {
+            cardView.frame = endFrame
+        })
         
         arr.append(cardView)
         boardView.addSubview(cardView)
