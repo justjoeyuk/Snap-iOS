@@ -30,7 +30,7 @@ class GameViewController: BaseViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        snapTimer = NSTimer(timeInterval: 0.2, target: self, selector: "turnCard", userInfo: nil, repeats: true)
+        snapTimer = NSTimer(timeInterval: 1, target: self, selector: "turnCard", userInfo: nil, repeats: true)
         
         turnCard()
         NSRunLoop.currentRunLoop().addTimer(snapTimer, forMode:NSRunLoopCommonModes)
@@ -43,8 +43,10 @@ class GameViewController: BaseViewController {
     
     func turnCard() {
         
+        print( deck.cards.count )
+        
         if (lastFourCardViews.count == 4) { removeOldestCardView() }
-        if (deck.getTopCard() == nil) { return } // DECK EMPTY
+        if (deck.cards.count == 0) { return } // DECK EMPTY
         
         let card = deck.getTopCard() as! SuitedCard
         let cardView = SuitedCardView(card: card, initialFace: .Back)

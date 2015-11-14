@@ -21,6 +21,8 @@
             [self addCard:newCard];
         }
     }
+    
+    NSLog(@"%@", self.cards);
 }
 
 - (id)copyWithZone:(NSZone *)zone
