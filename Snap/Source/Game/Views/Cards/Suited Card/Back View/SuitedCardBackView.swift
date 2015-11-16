@@ -9,7 +9,7 @@
 import UIKit
 
 
-class SuitedCardBackView: BaseView {
+class SuitedCardBackView: CardFaceView {
     
     override func setup() {
         self.backgroundColor = UIColor(patternImage: UIImage(named: "Suited Background Image")!)

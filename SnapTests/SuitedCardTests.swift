@@ -32,37 +32,38 @@ class SuitedCardTests: XCTestCase {
         let queenOfClubs = SuitedCard(suit: .Clubs, andValue: .Queen)
         let kingOfSpades = SuitedCard(suit: .Spades, andValue: .King)
         
-        let view = SuitedCardView(card: aceOfHearts)
+        let view = CardView(card: aceOfHearts)
+        let frontFaceView = view.frontView as! SuitedCardFrontView
         
-        XCTAssertEqual(view.suitCharacter, "♥")
-        XCTAssertEqual(view.valueText, "A")
+        XCTAssertEqual(frontFaceView.suitCharacter, "♥")
+        XCTAssertEqual(frontFaceView.valueText, "A")
         
         view.card = jackOfDiamonds
-        XCTAssertEqual(view.suitCharacter, "♦")
-        XCTAssertEqual(view.valueText, "J")
+        XCTAssertEqual(frontFaceView.suitCharacter, "♦")
+        XCTAssertEqual(frontFaceView.valueText, "J")
         
         view.card = queenOfClubs
-        XCTAssertEqual(view.suitCharacter, "♣")
-        XCTAssertEqual(view.valueText, "Q")
+        XCTAssertEqual(frontFaceView.suitCharacter, "♣")
+        XCTAssertEqual(frontFaceView.valueText, "Q")
         
         view.card = kingOfSpades
-        XCTAssertEqual(view.suitCharacter, "♠")
-        XCTAssertEqual(view.valueText, "K")
+        XCTAssertEqual(frontFaceView.suitCharacter, "♠")
+        XCTAssertEqual(frontFaceView.valueText, "K")
     }
     
     func testThatSuitedCardsFlipCorrectly() {
         let card = SuitedCard(suit: .Hearts, andValue: .Ace)
-        let suitedCardView = SuitedCardView(card: card, initialFace: SuitedCardFace.Front)
+        let cardView = CardView(card: card, initialFace: .Front)
         
-        XCTAssertEqual(suitedCardView.face, SuitedCardFace.Front)
+        XCTAssertEqual(cardView.face, .Front)
         
-        suitedCardView.flip()
+        cardView.flip()
         
-        XCTAssertEqual(suitedCardView.face, .Back)
+        XCTAssertEqual(cardView.face, .Back)
         
-        suitedCardView.flip()
+        cardView.flip()
         
-        XCTAssertEqual(suitedCardView.face, .Front)
+        XCTAssertEqual(cardView.face, .Front)
     }
     
 }

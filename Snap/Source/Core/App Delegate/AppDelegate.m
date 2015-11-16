@@ -19,6 +19,9 @@
     self.window.rootViewController = [[GameViewController alloc] init];
     [self.window makeKeyAndVisible];
     
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+    
     return YES;
 }
 

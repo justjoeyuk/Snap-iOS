@@ -14,16 +14,21 @@
 		EF1671821BF3C13400E38E86 /* suited_card_layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* suited_card_layouts.txt */; settings = {ASSET_TAGS = (); }; };
 		EF1671831BF3C13400E38E86 /* suited_card_layouts.txt in Resources */ = {isa = PBXBuildFile; fileRef = EF1671811BF3C13400E38E86 /* suited_card_layouts.txt */; settings = {ASSET_TAGS = (); }; };
 		EF1671941BF3CD7500E38E86 /* DeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671931BF3CD7500E38E86 /* DeckTests.swift */; settings = {ASSET_TAGS = (); }; };
-		EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16719C1BF3CE7A00E38E86 /* Deck.m */; settings = {ASSET_TAGS = (); }; };
-		EF16719E1BF3CE7A00E38E86 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EF16719C1BF3CE7A00E38E86 /* Deck.m */; settings = {ASSET_TAGS = (); }; };
 		EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A61BF3DAFD00E38E86 /* BaseView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671A91BF3DAFD00E38E86 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A71BF3DAFD00E38E86 /* BaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671AB1BF3DF6B00E38E86 /* GameViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671BE1BF3F6C500E38E86 /* SuitedCard.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */; settings = {ASSET_TAGS = (); }; };
 		EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C91BF3FB2C00E38E86 /* BoardView.swift */; settings = {ASSET_TAGS = (); }; };
-		EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
-		EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1671A61BF3DAFD00E38E86 /* BaseView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF21DAA11BF9810500A53FA7 /* CardFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF21DAA01BF9810500A53FA7 /* CardFaceView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF21DAA21BF9824B00A53FA7 /* CardFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF21DAA01BF9810500A53FA7 /* CardFaceView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF62BDDC1BF9566300E12B6D /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62BDDB1BF9566300E12B6D /* Stack.m */; settings = {ASSET_TAGS = (); }; };
+		EF62BDE41BF9626400E12B6D /* DeckGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62BDE31BF9626400E12B6D /* DeckGeneratorTests.swift */; settings = {ASSET_TAGS = (); }; };
+		EF62BDEB1BF9654000E12B6D /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62BDE71BF9654000E12B6D /* Deck.m */; settings = {ASSET_TAGS = (); }; };
+		EF62BDEC1BF9654000E12B6D /* DeckGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62BDEA1BF9654000E12B6D /* DeckGenerator.m */; settings = {ASSET_TAGS = (); }; };
+		EF62BDF21BF9664300E12B6D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62BDF11BF9664300E12B6D /* CardView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF62BDF31BF96AC400E12B6D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62BDF11BF9664300E12B6D /* CardView.swift */; settings = {ASSET_TAGS = (); }; };
+		EF69F98B1BF987A100699105 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69F98A1BF987A100699105 /* Player.m */; settings = {ASSET_TAGS = (); }; };
 		EFE304771BF5173D006E39A0 /* UIFont+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE304761BF5173D006E39A0 /* UIFont+Scaling.m */; settings = {ASSET_TAGS = (); }; };
 		EFE3047B1BF5176B006E39A0 /* NSString+Whitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3047A1BF5176B006E39A0 /* NSString+Whitespace.m */; settings = {ASSET_TAGS = (); }; };
 		EFE3048A1BF5245F006E39A0 /* SuitedCardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304891BF5245F006E39A0 /* SuitedCardFrontView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -33,12 +38,10 @@
 		EFE304931BF5284F006E39A0 /* SuitedCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304951BF574D1006E39A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304941BF574D1006E39A0 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304961BF57CD8006E39A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304941BF574D1006E39A0 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
-		EFE3049A1BF57E8C006E39A0 /* SuitedDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE304991BF57E8C006E39A0 /* SuitedDeck.m */; settings = {ASSET_TAGS = (); }; };
-		EFE3049D1BF58302006E39A0 /* SuitedDeckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3049C1BF58302006E39A0 /* SuitedDeckTests.swift */; settings = {ASSET_TAGS = (); }; };
+		EFE3049D1BF58302006E39A0 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE3049C1BF58302006E39A0 /* StackTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */; settings = {ASSET_TAGS = (); }; };
-		EFF5B1B51BF4B6AA00523B09 /* SuitedLayoutParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1B21BF4A6CF00523B09 /* SuitedLayoutParser.m */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1BB1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5B1BA1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1C51BF4BF7000523B09 /* suited_card_layouts_not_enough_chars.txt in Resources */ = {isa = PBXBuildFile; fileRef = EFF5B1C11BF4BF7000523B09 /* suited_card_layouts_not_enough_chars.txt */; settings = {ASSET_TAGS = (); }; };
 		EFF5B1C71BF4BF7000523B09 /* suited_card_layouts_too_many_chars.txt in Resources */ = {isa = PBXBuildFile; fileRef = EFF5B1C31BF4BF7000523B09 /* suited_card_layouts_too_many_chars.txt */; settings = {ASSET_TAGS = (); }; };
@@ -70,16 +73,25 @@
 		EF16718E1BF3C2C000E38E86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1671901BF3C30F00E38E86 /* Snap-Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Snap-Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EF1671931BF3CD7500E38E86 /* DeckTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckTests.swift; sourceTree = "<group>"; };
-		EF16719B1BF3CE7A00E38E86 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
-		EF16719C1BF3CE7A00E38E86 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
 		EF1671A61BF3DAFD00E38E86 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EF1671A71BF3DAFD00E38E86 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EF1671AB1BF3DF6B00E38E86 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		EF1671BC1BF3F6C500E38E86 /* SuitedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCard.h; sourceTree = "<group>"; };
 		EF1671BD1BF3F6C500E38E86 /* SuitedCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCard.m; sourceTree = "<group>"; };
 		EF1671BF1BF3F6F100E38E86 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardView.swift; sourceTree = "<group>"; };
 		EF1671C91BF3FB2C00E38E86 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		EF21DAA01BF9810500A53FA7 /* CardFaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFaceView.swift; sourceTree = "<group>"; };
+		EF62BDDA1BF9566300E12B6D /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		EF62BDDB1BF9566300E12B6D /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		EF62BDDD1BF9575500E12B6D /* Stack_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack_Private.h; sourceTree = "<group>"; };
+		EF62BDE31BF9626400E12B6D /* DeckGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckGeneratorTests.swift; sourceTree = "<group>"; };
+		EF62BDE61BF9654000E12B6D /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		EF62BDE71BF9654000E12B6D /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		EF62BDE91BF9654000E12B6D /* DeckGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckGenerator.h; sourceTree = "<group>"; };
+		EF62BDEA1BF9654000E12B6D /* DeckGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeckGenerator.m; sourceTree = "<group>"; };
+		EF62BDF11BF9664300E12B6D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EF69F9891BF987A100699105 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		EF69F98A1BF987A100699105 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		EFE304751BF5173D006E39A0 /* UIFont+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Scaling.h"; sourceTree = "<group>"; };
 		EFE304761BF5173D006E39A0 /* UIFont+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Scaling.m"; sourceTree = "<group>"; };
 		EFE304791BF5176B006E39A0 /* NSString+Whitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Whitespace.h"; sourceTree = "<group>"; };
@@ -89,10 +101,7 @@
 		EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardBackView.swift; sourceTree = "<group>"; };
 		EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardTests.swift; sourceTree = "<group>"; };
 		EFE304941BF574D1006E39A0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		EFE304981BF57E8C006E39A0 /* SuitedDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedDeck.h; sourceTree = "<group>"; };
-		EFE304991BF57E8C006E39A0 /* SuitedDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedDeck.m; sourceTree = "<group>"; };
-		EFE3049B1BF57FDA006E39A0 /* Deck_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck_Private.h; sourceTree = "<group>"; };
-		EFE3049C1BF58302006E39A0 /* SuitedDeckTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedDeckTests.swift; sourceTree = "<group>"; };
+		EFE3049C1BF58302006E39A0 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		EFF5B1AA1BF49C7E00523B09 /* SuitedCardViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuitedCardViewDecorator.h; sourceTree = "<group>"; };
 		EFF5B1AB1BF49C7E00523B09 /* SuitedCardViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuitedCardViewDecorator.m; sourceTree = "<group>"; };
 		EFF5B1AE1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuitedCardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -179,7 +188,8 @@
 				EF1671931BF3CD7500E38E86 /* DeckTests.swift */,
 				EFF5B1BA1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift */,
 				EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */,
-				EFE3049C1BF58302006E39A0 /* SuitedDeckTests.swift */,
+				EFE3049C1BF58302006E39A0 /* StackTests.swift */,
+				EF62BDE31BF9626400E12B6D /* DeckGeneratorTests.swift */,
 			);
 			path = SnapTests;
 			sourceTree = "<group>";
@@ -261,8 +271,9 @@
 		EF1671861BF3C21E00E38E86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF62BDD71BF955EF00E12B6D /* Player */,
+				EF62BDD91BF955EF00E12B6D /* Stack */,
 				EF1671BA1BF3F6C500E38E86 /* Cards */,
-				EF1671981BF3CE5500E38E86 /* Deck */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,17 +285,6 @@
 				EF1671901BF3C30F00E38E86 /* Snap-Tests-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EF1671981BF3CE5500E38E86 /* Deck */ = {
-			isa = PBXGroup;
-			children = (
-				EFE304971BF57E78006E39A0 /* Suited */,
-				EF16719B1BF3CE7A00E38E86 /* Deck.h */,
-				EF16719C1BF3CE7A00E38E86 /* Deck.m */,
-				EFE3049B1BF57FDA006E39A0 /* Deck_Private.h */,
-			);
-			path = Deck;
 			sourceTree = "<group>";
 		};
 		EF16719F1BF3D7E500E38E86 /* Views */ = {
@@ -316,8 +316,8 @@
 		EF1671BA1BF3F6C500E38E86 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				EF1671BF1BF3F6F100E38E86 /* Card.h */,
 				EF1671BB1BF3F6C500E38E86 /* Suited Card */,
+				EF1671BF1BF3F6F100E38E86 /* Card.h */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -337,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				EF1671C31BF3FA4500E38E86 /* Suited Card */,
+				EF62BDF11BF9664300E12B6D /* CardView.swift */,
+				EF21DAA01BF9810500A53FA7 /* CardFaceView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -347,7 +349,6 @@
 				EFE304881BF5244C006E39A0 /* Front View */,
 				EFE3048E1BF52803006E39A0 /* Back View */,
 				EFF5B1AD1BF49FC800523B09 /* Collection View Cells */,
-				EF1671C51BF3FA4500E38E86 /* SuitedCardView.swift */,
 			);
 			path = "Suited Card";
 			sourceTree = "<group>";
@@ -358,6 +359,45 @@
 				EF1671C91BF3FB2C00E38E86 /* BoardView.swift */,
 			);
 			path = Board;
+			sourceTree = "<group>";
+		};
+		EF62BDD71BF955EF00E12B6D /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				EF69F9891BF987A100699105 /* Player.h */,
+				EF69F98A1BF987A100699105 /* Player.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		EF62BDD91BF955EF00E12B6D /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				EF62BDE51BF9654000E12B6D /* Deck */,
+				EF62BDDA1BF9566300E12B6D /* Stack.h */,
+				EF62BDDB1BF9566300E12B6D /* Stack.m */,
+				EF62BDDD1BF9575500E12B6D /* Stack_Private.h */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		EF62BDE51BF9654000E12B6D /* Deck */ = {
+			isa = PBXGroup;
+			children = (
+				EF62BDE81BF9654000E12B6D /* Generator */,
+				EF62BDE61BF9654000E12B6D /* Deck.h */,
+				EF62BDE71BF9654000E12B6D /* Deck.m */,
+			);
+			path = Deck;
+			sourceTree = "<group>";
+		};
+		EF62BDE81BF9654000E12B6D /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				EF62BDE91BF9654000E12B6D /* DeckGenerator.h */,
+				EF62BDEA1BF9654000E12B6D /* DeckGenerator.m */,
+			);
+			path = Generator;
 			sourceTree = "<group>";
 		};
 		EFE304701BF511AB006E39A0 /* Extensions */ = {
@@ -401,15 +441,6 @@
 				EFE3048F1BF52813006E39A0 /* SuitedCardBackView.swift */,
 			);
 			path = "Back View";
-			sourceTree = "<group>";
-		};
-		EFE304971BF57E78006E39A0 /* Suited */ = {
-			isa = PBXGroup;
-			children = (
-				EFE304981BF57E8C006E39A0 /* SuitedDeck.h */,
-				EFE304991BF57E8C006E39A0 /* SuitedDeck.m */,
-			);
-			path = Suited;
 			sourceTree = "<group>";
 		};
 		EFF5B1A91BF49C6100523B09 /* Decorator */ = {
@@ -602,23 +633,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF62BDEB1BF9654000E12B6D /* Deck.m in Sources */,
+				EF62BDDC1BF9566300E12B6D /* Stack.m in Sources */,
 				EFF5B1AC1BF49C7E00523B09 /* SuitedCardViewDecorator.m in Sources */,
 				EFE304951BF574D1006E39A0 /* Constants.swift in Sources */,
 				EFE304901BF52813006E39A0 /* SuitedCardBackView.swift in Sources */,
-				EF16719D1BF3CE7A00E38E86 /* Deck.m in Sources */,
 				EF1671741BF3AFA200E38E86 /* main.m in Sources */,
-				EF1671CE1BF4098A00E38E86 /* SuitedCardView.swift in Sources */,
+				EF62BDF21BF9664300E12B6D /* CardView.swift in Sources */,
 				EFF5B1B31BF4A6CF00523B09 /* SuitedLayoutParser.m in Sources */,
 				EFE3048A1BF5245F006E39A0 /* SuitedCardFrontView.swift in Sources */,
 				EF1671721BF3AFA200E38E86 /* AppDelegate.m in Sources */,
 				EF1671AC1BF3DF6B00E38E86 /* GameViewController.swift in Sources */,
-				EFE3049A1BF57E8C006E39A0 /* SuitedDeck.m in Sources */,
 				EF1671A81BF3DAFD00E38E86 /* BaseView.swift in Sources */,
 				EFE3047B1BF5176B006E39A0 /* NSString+Whitespace.m in Sources */,
 				EFE304771BF5173D006E39A0 /* UIFont+Scaling.m in Sources */,
 				EFF5B1AF1BF49FEA00523B09 /* SuitedCardCollectionViewCell.swift in Sources */,
 				EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */,
+				EF21DAA11BF9810500A53FA7 /* CardFaceView.swift in Sources */,
+				EF62BDEC1BF9654000E12B6D /* DeckGenerator.m in Sources */,
 				EF1671A91BF3DAFD00E38E86 /* BaseViewController.swift in Sources */,
+				EF69F98B1BF987A100699105 /* Player.m in Sources */,
 				EF1671BE1BF3F6C500E38E86 /* SuitedCard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,17 +661,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFE3049D1BF58302006E39A0 /* SuitedDeckTests.swift in Sources */,
+				EFE3049D1BF58302006E39A0 /* StackTests.swift in Sources */,
 				EFE3048D1BF52795006E39A0 /* SuitedCardFrontView.swift in Sources */,
 				EFE304911BF52813006E39A0 /* SuitedCardBackView.swift in Sources */,
-				EF16719E1BF3CE7A00E38E86 /* Deck.m in Sources */,
 				EFE304931BF5284F006E39A0 /* SuitedCardTests.swift in Sources */,
+				EF21DAA21BF9824B00A53FA7 /* CardFaceView.swift in Sources */,
 				EF1671941BF3CD7500E38E86 /* DeckTests.swift in Sources */,
 				EFE304961BF57CD8006E39A0 /* Constants.swift in Sources */,
 				EFF5B1BB1BF4BD2D00523B09 /* SuitedLayoutParserTests.swift in Sources */,
 				EF1671D01BF409DB00E38E86 /* BaseView.swift in Sources */,
-				EF1671CF1BF4098C00E38E86 /* SuitedCardView.swift in Sources */,
-				EFF5B1B51BF4B6AA00523B09 /* SuitedLayoutParser.m in Sources */,
+				EF62BDE41BF9626400E12B6D /* DeckGeneratorTests.swift in Sources */,
+				EF62BDF31BF96AC400E12B6D /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

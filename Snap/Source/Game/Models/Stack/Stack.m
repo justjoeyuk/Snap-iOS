@@ -1,18 +1,16 @@
 //
-//  Deck.m
+//  Stack.m
 //  Snap
 //
-//  Created by Joey Clover on 11/11/2015.
+//  Created by Joey Clover on 16/11/2015.
 //  Copyright © 2015 Just Joey. All rights reserved.
 //
 
-#import "Deck_Private.h"
-#import "Card.h"
-#import "SuitedCard.h"
+#import "Stack.h"
+#import "Stack_Private.h"
 
 
-@implementation Deck
-
+@implementation Stack
 
 #pragma mark Initialization
 
@@ -36,7 +34,7 @@
 }
 
 
-#pragma mark Get Cards
+#pragma mark Cards
 
 - (id<Card>)getTopCard
 {
@@ -46,16 +44,18 @@
     return card;
 }
 
-
-#pragma mark Deck Manipulation
-
-- (void)fillWithCards
+- (void)addCard:(id<Card>)card
 {
+    [self.cards addObject:card];
 }
 
-- (void)removeAllCards
+- (void)addStack:(Stack *)otherStack
 {
-    [self.cards removeAllObjects];
+    NSUInteger otherStackCount = otherStack.cards.count;
+    
+    for (int card = 0; card < otherStackCount; card++) {
+        [self addCard:[otherStack getTopCard]];
+    }
 }
 
 - (void)shuffleCards
@@ -72,19 +72,9 @@
     } while ( [original isEqualToArray:self.cards] );
 }
 
-- (void)addCard:(id<Card>)card
+- (NSUInteger)count
 {
-    [self.cards addObject:card];
-}
-
-
-#pragma mark NSCopying
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    Deck *newDeck = [[Deck alloc] init];
-    newDeck.cards = [[NSMutableArray alloc] initWithArray:self.cards copyItems:YES];
-    return newDeck;
+    return self.cards.count;
 }
 
 
@@ -92,10 +82,10 @@
 
 - (BOOL)isEqual:(id)object
 {
-    Deck *otherDeck = (Deck *)object;
+    Stack *otherStack = (Stack *)object;
     
-    if (otherDeck) {
-        return [otherDeck.cards isEqualToArray:self.cards];
+    if (otherStack) {
+        return [otherStack.cards isEqualToArray:self.cards];
     }
     
     return NO;

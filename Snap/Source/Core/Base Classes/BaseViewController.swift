@@ -12,27 +12,31 @@ import UIKit
 
 class BaseViewController: UIViewController {
   
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
     super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    
+
     setup()
-  }
-  
-  required convenience init?(coder aDecoder: NSCoder) {
+    }
+
+    required convenience init?(coder aDecoder: NSCoder) {
     self.init(nibName:nil, bundle:nil)
-  }
-  
-  override func viewDidLoad() {
+    }
+
+    override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     // Do any additional setup after loading the view.
-  }
-  
-  override func didReceiveMemoryWarning() {
+    }
+
+    override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  }
-  
-  func setup() {}
+    }
+
+    func setup() {}
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
   
 }

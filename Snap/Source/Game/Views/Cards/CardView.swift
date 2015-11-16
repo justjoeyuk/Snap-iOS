@@ -2,7 +2,7 @@
 //  CardView.swift
 //  Snap
 //
-//  Created by Joey Clover on 11/11/2015.
+//  Created by Joey Clover on 16/11/2015.
 //  Copyright © 2015 Just Joey. All rights reserved.
 //
 
@@ -10,57 +10,44 @@ import Foundation
 import UIKit
 
 
-/** Contains directions in which to flip the card view from */
-enum SuitedCardFlipDirection {
-    case FromOpposite
-    case FromTop
-    case FromLeft
-    case FromRight
-    case FromBottom
-}
-
-
-class SuitedCardView: BaseView {
+@objc
+class CardView: BaseView {
     
-    private var frontView: SuitedCardFrontView
-    private var backView: SuitedCardBackView
-    private var frontDecorator: SuitedCardViewDecorator?
+    var frontView: CardFaceView
+    var backView: CardFaceView
     
-    private var currentFlipDirection: SuitedCardFlipDirection?
-    private var oppositeFlipDirection: SuitedCardFlipDirection?
+    private var currentFlipDirection: CardViewFlipDirection?
+    private var oppositeFlipDirection: CardViewFlipDirection?
     
-    var suitCharacter:String = "?"
-    var valueText:String = "??"
-    
-    var card: SuitedCard? { didSet {
+    var card: Card? { didSet {
         didUpdateCard()
-    }}
+        }}
     
-    var face: SuitedCardFace? { willSet {
+    var face: CardViewFace? { willSet {
         updateFace(newValue)
-    }}
+        }}
     
     
     // MARK: Initialization
     
-    required init(card: SuitedCard, initialFace: SuitedCardFace = .Back) {
-        self.frontView = SuitedCardFrontView()
-        self.backView = SuitedCardBackView()
+    required init(card: Card, initialFace: CardViewFace = .Back) {
+        self.frontView = CardFaceView.frontFaceView(card)!
+        self.backView = CardFaceView.backFaceView(card)!
         
         self.face = initialFace
         self.card = card
-        self.frontDecorator = SuitedCardViewDecorator(collectionView: frontView.suitCollectionView, andCard: self.card)
         
         super.init(frame: CGRectZero)
+        
         didUpdateCard()
         updateFace(self.face)
     }
-
+    
     required convenience init(coder: NSCoder) {
         self.init(card:SuitedCard())
     }
     
-
+    
     // MARK: Setup
     
     override func setup() {
@@ -88,28 +75,18 @@ class SuitedCardView: BaseView {
     func didUpdateCard() {
         if self.card == nil { return }
         
-        suitCharacter = SuitedCard.characterForSuit(card!.suit)
-        valueText = SuitedCard.charactersForValue(card!.value)
-        
-        frontView.bottomValueLabel.textColor = SuitedCard.colorForSuit(card!.suit)
-        frontView.topValueLabel.textColor = SuitedCard.colorForSuit(card!.suit)
-        
-        frontView.topValueLabel.text = "\(valueText)"
-        frontView.topSuitLabel.text = "\(suitCharacter)"
-        
-        frontView.bottomValueLabel.text = "\(valueText)"
-        frontView.bottomSuitLabel.text = "\(suitCharacter)"
+        frontView.cardDidUpdate(self.card!)
     }
     
     
     // MARK: Face Update
     
-    func updateFace(newFace:SuitedCardFace?) {
+    private func updateFace(newFace:CardViewFace?) {
         if (newFace == nil) { return }
         showFace(newFace!)
     }
     
-    private func showFace(face:SuitedCardFace) {
+    private func showFace(face:CardViewFace) {
         switch face {
         case .Front:
             self.frontView.hidden = false
@@ -120,7 +97,7 @@ class SuitedCardView: BaseView {
         }
     }
     
-    func flip(var flipDirection:SuitedCardFlipDirection = .FromOpposite, completion:SingleBoolCallback? = nil) {
+    func flip(var flipDirection:CardViewFlipDirection = .FromOpposite, completion:SingleBoolCallback? = nil) {
         if self.face == nil { return }
         
         if (flipDirection == .FromOpposite && self.oppositeFlipDirection == nil) {
@@ -152,7 +129,7 @@ class SuitedCardView: BaseView {
         }
     }
     
-    private func animateToFace(face:SuitedCardFace, direction:SuitedCardFlipDirection, completion:SingleBoolCallback? = nil) {
+    private func animateToFace(face:CardViewFace, direction:CardViewFlipDirection, completion:SingleBoolCallback? = nil) {
         let fromView = (self.face == .Front) ? self.frontView : self.backView
         let toView = (self.face == .Front) ? self.backView : self.frontView
         
@@ -184,7 +161,7 @@ class SuitedCardView: BaseView {
 
 // MARK: Layout
 
-extension SuitedCardView {
+extension CardView {
     
     override func setupConstraints() {
         
@@ -198,4 +175,23 @@ extension SuitedCardView {
         
     }
     
+}
+
+
+
+
+// MARK: Enumerations
+
+/** Contains directions in which to flip the card view from */
+enum CardViewFlipDirection {
+    case FromOpposite
+    case FromTop
+    case FromLeft
+    case FromRight
+    case FromBottom
+}
+
+enum CardViewFace {
+    case Front
+    case Back
 }

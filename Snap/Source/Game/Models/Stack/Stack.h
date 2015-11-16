@@ -1,24 +1,26 @@
 //
-//  Deck.h
+//  Stack.h
 //  Snap
 //
-//  Created by Joey Clover on 11/11/2015.
+//  Created by Joey Clover on 16/11/2015.
 //  Copyright © 2015 Just Joey. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "Card.h"
 
-
-/** 
+/**
  Represents a collection of Cards that can be shuffled and manipulated.
  
  @see Card
  */
-@interface Deck : NSObject <NSCopying>
+@interface Stack : NSObject
 
 /** The internal collection of cards */
-@property (strong, nonatomic, readonly) NSMutableArray *cards;
+@property (strong, nonatomic, readonly) NSMutableArray<id<Card>> *cards;
+
+/** The number of cards left in stack */
+@property (assign, nonatomic, readonly) NSUInteger count;
 
 
 /** Initializes the Deck with a capacity */
@@ -27,13 +29,13 @@
 /** Retrieves the last card added to the deck (FIFO) and removes it from the deck */
 - (id<Card>)getTopCard;
 
-/** Adds a full set of suited cards to the deck */
-- (void)fillWithCards;
+/** Adds a card to the end of the deck */
+- (void)addCard:(id<Card>)card;
+
+/** Adds stack to the current stack */
+- (void)addStack:(Stack *)otherStack;
 
 /** Shuffles all the cards randomly in the deck */
 - (void)shuffleCards;
-
-/** Adds a card to the end of the deck */
-- (void)addCard:(id<Card>)card;
 
 @end

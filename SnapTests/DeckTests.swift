@@ -18,15 +18,23 @@ class DeckTests: XCTestCase {
         super.tearDown()
     }
     
-    func testThatDeckCanAddCards() {
-        let deck = Deck()
-        let cardOne = SuitedCard(suit: .Hearts, andValue: .Ace)
-        let cardTwo = SuitedCard(suit: .Clubs, andValue: .Ace)
+    func testThatRemoveAllCardsWorks() {
+        let deck = DeckGenerator.generateSuitedDeck()
         
-        deck.addCard(cardOne)
-        deck.addCard(cardTwo)
+        XCTAssertTrue(deck.cards.count == 52)
         
-        XCTAssertEqual(deck.cards.count, 2)
+        deck.removeAllCards()
+        
+        XCTAssertTrue(deck.cards.count == 0)
+    }
+    
+    func testThatShuffleWorks() {
+        let deck = DeckGenerator.generateSuitedDeck()
+        
+        let originalCards = deck.cards.copy() as! NSArray
+        deck.shuffleCards()
+        
+        XCTAssertNotEqual(deck.cards, originalCards)
     }
     
 }

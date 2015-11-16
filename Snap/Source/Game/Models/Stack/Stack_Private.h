@@ -1,14 +1,14 @@
 //
-//  Deck_Private.h
+//  Stack_Private.h
 //  Snap
 //
-//  Created by Joey Clover on 13/11/2015.
+//  Created by Joey Clover on 16/11/2015.
 //  Copyright © 2015 Just Joey. All rights reserved.
 //
-#import "Deck.h"
+#import "Stack.h"
 
 
-@interface Deck ()
+@interface Stack ()
 
 @property (strong, nonatomic) NSMutableArray *cards;
 

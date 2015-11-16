@@ -1,5 +1,5 @@
-#import "Deck_Private.h"
-#import "SuitedDeck.h"
+#import "Deck.h"
+#import "DeckGenerator.h"
 
 #import "UIFont+Scaling.h"
 

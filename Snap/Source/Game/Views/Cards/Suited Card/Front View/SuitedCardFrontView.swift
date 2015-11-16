@@ -9,21 +9,28 @@
 import UIKit
 
 
-class SuitedCardFrontView : BaseView {
+class SuitedCardFrontView : CardFaceView {
     
     let topValueLabel = UILabel(), bottomValueLabel = UILabel()
     let topSuitLabel = UILabel(), bottomSuitLabel = UILabel()
-    var suitCollectionView: UICollectionView
-    private var decorator: SuitedCardViewDecorator?
+    var suitCollectionView: UICollectionView!
+    private var decorator: SuitedCardViewDecorator!
+    
+    var suitCharacter, valueText: String?
     
     
     // MARK: Initialisation
     
-    override init(frame:CGRect) {
+    init(card:SuitedCard) {
         let layout = UICollectionViewFlowLayout()
-        self.suitCollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
+        suitCollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
+        decorator = SuitedCardViewDecorator(collectionView: suitCollectionView, andCard: card)
         
-        super.init(frame: frame)
+        super.init(frame:CGRectZero)
+    }
+
+    required convenience init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     
@@ -72,6 +79,27 @@ class SuitedCardFrontView : BaseView {
         addSubview(suitCollectionView)
     }
     
+    
+    // MARK FrontCardFaceView Protocol
+    
+    override func cardDidUpdate(card: Card) {
+        if let suitedCard = card as? SuitedCard {
+            bottomValueLabel.textColor = SuitedCard.colorForSuit(suitedCard.suit)
+            topValueLabel.textColor = SuitedCard.colorForSuit(suitedCard.suit)
+            
+            bottomValueLabel.textColor = SuitedCard.colorForSuit(suitedCard.suit)
+            topValueLabel.textColor = SuitedCard.colorForSuit(suitedCard.suit)
+            
+            suitCharacter = SuitedCard.characterForSuit(suitedCard.suit)
+            valueText = SuitedCard.charactersForValue(suitedCard.value)
+            
+            topValueLabel.text = "\(valueText!)"
+            topSuitLabel.text = "\(suitCharacter!)"
+            
+            bottomValueLabel.text = "\(valueText!)"
+            bottomSuitLabel.text = "\(suitCharacter!)"
+        }
+    }
 }
 
 
