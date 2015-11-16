@@ -29,6 +29,9 @@
 		EF62BDF21BF9664300E12B6D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62BDF11BF9664300E12B6D /* CardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF62BDF31BF96AC400E12B6D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62BDF11BF9664300E12B6D /* CardView.swift */; settings = {ASSET_TAGS = (); }; };
 		EF69F98B1BF987A100699105 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69F98A1BF987A100699105 /* Player.m */; settings = {ASSET_TAGS = (); }; };
+		EF69F9941BF9D7E400699105 /* Seat.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69F9931BF9D7E400699105 /* Seat.m */; settings = {ASSET_TAGS = (); }; };
+		EF69F9971BF9D7F900699105 /* Table.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69F9961BF9D7F900699105 /* Table.m */; settings = {ASSET_TAGS = (); }; };
+		EF69F9991BF9DEAD00699105 /* TableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69F9981BF9DEAD00699105 /* TableTests.swift */; settings = {ASSET_TAGS = (); }; };
 		EFE304771BF5173D006E39A0 /* UIFont+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE304761BF5173D006E39A0 /* UIFont+Scaling.m */; settings = {ASSET_TAGS = (); }; };
 		EFE3047B1BF5176B006E39A0 /* NSString+Whitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3047A1BF5176B006E39A0 /* NSString+Whitespace.m */; settings = {ASSET_TAGS = (); }; };
 		EFE3048A1BF5245F006E39A0 /* SuitedCardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE304891BF5245F006E39A0 /* SuitedCardFrontView.swift */; settings = {ASSET_TAGS = (); }; };
@@ -92,6 +95,11 @@
 		EF62BDF11BF9664300E12B6D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EF69F9891BF987A100699105 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		EF69F98A1BF987A100699105 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		EF69F9921BF9D7E400699105 /* Seat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seat.h; sourceTree = "<group>"; };
+		EF69F9931BF9D7E400699105 /* Seat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seat.m; sourceTree = "<group>"; };
+		EF69F9951BF9D7F900699105 /* Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		EF69F9961BF9D7F900699105 /* Table.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Table.m; sourceTree = "<group>"; };
+		EF69F9981BF9DEAD00699105 /* TableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTests.swift; sourceTree = "<group>"; };
 		EFE304751BF5173D006E39A0 /* UIFont+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Scaling.h"; sourceTree = "<group>"; };
 		EFE304761BF5173D006E39A0 /* UIFont+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Scaling.m"; sourceTree = "<group>"; };
 		EFE304791BF5176B006E39A0 /* NSString+Whitespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Whitespace.h"; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 				EFE304921BF5284F006E39A0 /* SuitedCardTests.swift */,
 				EFE3049C1BF58302006E39A0 /* StackTests.swift */,
 				EF62BDE31BF9626400E12B6D /* DeckGeneratorTests.swift */,
+				EF69F9981BF9DEAD00699105 /* TableTests.swift */,
 			);
 			path = SnapTests;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 		EF1671861BF3C21E00E38E86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF69F9901BF9D7E400699105 /* Table */,
 				EF62BDD71BF955EF00E12B6D /* Player */,
 				EF62BDD91BF955EF00E12B6D /* Stack */,
 				EF1671BA1BF3F6C500E38E86 /* Cards */,
@@ -398,6 +408,25 @@
 				EF62BDEA1BF9654000E12B6D /* DeckGenerator.m */,
 			);
 			path = Generator;
+			sourceTree = "<group>";
+		};
+		EF69F9901BF9D7E400699105 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				EF69F9911BF9D7E400699105 /* Seat */,
+				EF69F9951BF9D7F900699105 /* Table.h */,
+				EF69F9961BF9D7F900699105 /* Table.m */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		EF69F9911BF9D7E400699105 /* Seat */ = {
+			isa = PBXGroup;
+			children = (
+				EF69F9921BF9D7E400699105 /* Seat.h */,
+				EF69F9931BF9D7E400699105 /* Seat.m */,
+			);
+			path = Seat;
 			sourceTree = "<group>";
 		};
 		EFE304701BF511AB006E39A0 /* Extensions */ = {
@@ -651,9 +680,11 @@
 				EF1671CA1BF3FB2C00E38E86 /* BoardView.swift in Sources */,
 				EF21DAA11BF9810500A53FA7 /* CardFaceView.swift in Sources */,
 				EF62BDEC1BF9654000E12B6D /* DeckGenerator.m in Sources */,
+				EF69F9971BF9D7F900699105 /* Table.m in Sources */,
 				EF1671A91BF3DAFD00E38E86 /* BaseViewController.swift in Sources */,
 				EF69F98B1BF987A100699105 /* Player.m in Sources */,
 				EF1671BE1BF3F6C500E38E86 /* SuitedCard.m in Sources */,
+				EF69F9941BF9D7E400699105 /* Seat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +694,7 @@
 			files = (
 				EFE3049D1BF58302006E39A0 /* StackTests.swift in Sources */,
 				EFE3048D1BF52795006E39A0 /* SuitedCardFrontView.swift in Sources */,
+				EF69F9991BF9DEAD00699105 /* TableTests.swift in Sources */,
 				EFE304911BF52813006E39A0 /* SuitedCardBackView.swift in Sources */,
 				EFE304931BF5284F006E39A0 /* SuitedCardTests.swift in Sources */,
 				EF21DAA21BF9824B00A53FA7 /* CardFaceView.swift in Sources */,

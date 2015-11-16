@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Stack.h"
+#import "Seat.h"
 
 
 /**
@@ -21,6 +22,8 @@
 /** The stack that the player holds */
 @property (strong, nonatomic) Stack *cardStack;
 
+/** The seat position the player is in */
+@property (assign, nonatomic) SeatPosition seatPosition;
 
 /** Initializes the player with a name and a stack */
 - (instancetype)initWithName:(NSString *)name cardStack:(Stack *)stack;

@@ -7,3 +7,5 @@
 #import "UIFont+Scaling.h"
 #import "DeckGenerator.h"
 #import "Player.h"
+#import "Seat.h"
+#import "Table.h"

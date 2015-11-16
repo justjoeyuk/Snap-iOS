@@ -1,5 +1,8 @@
 #import "Deck.h"
 #import "DeckGenerator.h"
+#import "Table.h"
+#import "Seat.h"
+#import "Player.h"
 
 #import "UIFont+Scaling.h"
 

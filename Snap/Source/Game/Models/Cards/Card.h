@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, CardFlipDirection) {
+    FromOpposite,
+    FromBottom,
+    FromTop,
+    FromLeft,
+    FromRight
+};
+
+typedef NS_ENUM(NSUInteger, CardFace) {
+    Front,
+    Back,
+};
+
+
 /** Represents a Card in a game of Snap. */
 @protocol Card
 

@@ -16,21 +16,21 @@ class CardView: BaseView {
     var frontView: CardFaceView
     var backView: CardFaceView
     
-    private var currentFlipDirection: CardViewFlipDirection?
-    private var oppositeFlipDirection: CardViewFlipDirection?
+    private var currentFlipDirection: CardFlipDirection?
+    private var oppositeFlipDirection: CardFlipDirection?
     
     var card: Card? { didSet {
         didUpdateCard()
         }}
     
-    var face: CardViewFace? { willSet {
+    var face: CardFace? { willSet {
         updateFace(newValue)
         }}
     
     
     // MARK: Initialization
     
-    required init(card: Card, initialFace: CardViewFace = .Back) {
+    required init(card: Card, initialFace: CardFace = .Back) {
         self.frontView = CardFaceView.frontFaceView(card)!
         self.backView = CardFaceView.backFaceView(card)!
         
@@ -81,12 +81,12 @@ class CardView: BaseView {
     
     // MARK: Face Update
     
-    private func updateFace(newFace:CardViewFace?) {
+    private func updateFace(newFace:CardFace?) {
         if (newFace == nil) { return }
         showFace(newFace!)
     }
     
-    private func showFace(face:CardViewFace) {
+    private func showFace(face:CardFace) {
         switch face {
         case .Front:
             self.frontView.hidden = false
@@ -97,7 +97,7 @@ class CardView: BaseView {
         }
     }
     
-    func flip(var flipDirection:CardViewFlipDirection = .FromOpposite, completion:SingleBoolCallback? = nil) {
+    func flip(var flipDirection:CardFlipDirection = .FromOpposite, completion:SingleBoolCallback? = nil) {
         if self.face == nil { return }
         
         if (flipDirection == .FromOpposite && self.oppositeFlipDirection == nil) {
@@ -129,7 +129,7 @@ class CardView: BaseView {
         }
     }
     
-    private func animateToFace(face:CardViewFace, direction:CardViewFlipDirection, completion:SingleBoolCallback? = nil) {
+    private func animateToFace(face:CardFace, direction:CardFlipDirection, completion:SingleBoolCallback? = nil) {
         let fromView = (self.face == .Front) ? self.frontView : self.backView
         let toView = (self.face == .Front) ? self.backView : self.frontView
         
@@ -175,23 +175,4 @@ extension CardView {
         
     }
     
-}
-
-
-
-
-// MARK: Enumerations
-
-/** Contains directions in which to flip the card view from */
-enum CardViewFlipDirection {
-    case FromOpposite
-    case FromTop
-    case FromLeft
-    case FromRight
-    case FromBottom
-}
-
-enum CardViewFace {
-    case Front
-    case Back
 }
