@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Card.h"
+@class CardFaceView;
+
 
 /**
  Represents a collection of Cards that can be shuffled and manipulated.
@@ -34,6 +36,9 @@
 
 /** Adds stack to the current stack */
 - (void)addStack:(Stack *)otherStack;
+
+/** Gets the back view for the cards in the deck */
+- (CardFaceView *)backFaceView;
 
 /** Shuffles all the cards randomly in the deck */
 - (void)shuffleCards;

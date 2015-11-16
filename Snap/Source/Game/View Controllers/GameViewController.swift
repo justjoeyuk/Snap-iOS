@@ -21,7 +21,6 @@ class GameViewController: BaseViewController {
     var lastFourCardViews: Array<CardView>
     
     var gameTable: Table;
-    
     var currentSeat: Seat!
     
     var northPlayer: Player
@@ -119,6 +118,7 @@ class GameViewController: BaseViewController {
             centerStack.addCard(card)
         }
         
+        boardView.showPlayerInformationForSeat(currentSeat)
         currentSeat = gameTable.nextSeat(currentSeat)
     }
     

@@ -8,6 +8,7 @@
 
 #import "Stack.h"
 #import "Stack_Private.h"
+#import "Snap-Swift.h"
 
 
 @implementation Stack
@@ -75,6 +76,15 @@
 - (NSUInteger)count
 {
     return self.cards.count;
+}
+
+
+#pragma mark Views
+
+- (CardFaceView *)backFaceView
+{
+    id<Card> card = [self.cards firstObject];
+    return [CardFaceView backFaceView:card];
 }
 
 
