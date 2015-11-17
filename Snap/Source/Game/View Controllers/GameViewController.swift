@@ -64,7 +64,7 @@ class GameViewController: BaseViewController {
         setupSeats()
     }
     
-    func setupPlayers() {
+    private func setupPlayers() {
         let stacks: Array<Stack> = deck.split(4)
         
         humanPlayer.cardStack = stacks[0];
@@ -73,7 +73,7 @@ class GameViewController: BaseViewController {
         westPlayer.cardStack = stacks[3];
     }
     
-    func setupSeats() {
+    private func setupSeats() {
         let southSeat = Seat(player: humanPlayer, atPosition: .South)
         let northSeat = Seat(player: northPlayer, atPosition: .North)
         let eastSeat = Seat(player: eastPlayer, atPosition: .East)
@@ -85,7 +85,7 @@ class GameViewController: BaseViewController {
         gameTable.addSeat(eastSeat)
     }
     
-    func setupDeck() {
+    private func setupDeck() {
         deck = DeckGenerator.generateSuitedDeck()
         deck.shuffleCards()
     }
@@ -93,7 +93,7 @@ class GameViewController: BaseViewController {
     
     // MARK: Game Start
     
-    func startGame() {
+    private func startGame() {
         currentSeat = gameTable.seatForPosition(humanPlayer.seatPosition)
         
         nextTurn()
@@ -106,13 +106,15 @@ class GameViewController: BaseViewController {
     
     // MARK: Game Ticks
     
-    func nextTurn() {
+    private func nextTurn() {
         if (lastFourCardViews.count == 4) { removeOldestCardView() }
         if (centerStack.count == 52) { return } // DECK EMPTY
         
         if let nextPlayer = currentSeat.player {
             let card = nextPlayer.cardStack.getTopCard()
             let cardView = CardView(card: card)
+            
+            cardView.userInteractionEnabled = false
             
             self.presentCardView(cardView)
             centerStack.addCard(card)

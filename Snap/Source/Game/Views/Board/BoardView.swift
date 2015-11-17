@@ -16,6 +16,7 @@ class BoardView: BaseView {
     var eastPlayerInfoView: PlayerInformationView
     var westPlayerInfoView: PlayerInformationView
     var southPlayerInfoView: PlayerInformationView
+    var snapButton: ActionButton
     
     
     override init(frame: CGRect) {
@@ -24,12 +25,19 @@ class BoardView: BaseView {
         westPlayerInfoView = PlayerInformationView()
         southPlayerInfoView = PlayerInformationView()
         
+        snapButton = ActionButton(type: .System)
+        
         super.init(frame: frame)
     }
     
     override func setup() {
         self.backgroundColor = UIColor(patternImage: UIImage(named: "Table Texture Image")!)
         
+        snapButton.setTitle("Snap!", forState: .Normal)
+        snapButton.backgroundColor = UIColor(red: 0.7, green: 0.3, blue: 0.3, alpha: 1)
+        
+        
+        addSubview(snapButton)
         addSubview(westPlayerInfoView)
         addSubview(eastPlayerInfoView)
         addSubview(northPlayerInfoView)
@@ -43,8 +51,6 @@ class BoardView: BaseView {
         case .West: westPlayerInfoView.updateForPlayer(seat.player!)
         case .South: southPlayerInfoView.updateForPlayer(seat.player!)
         }
-        
-        
     }
     
 }
@@ -73,6 +79,12 @@ extension BoardView {
         self.southPlayerInfoView.snp_makeConstraints() { make in
             make.bottom.equalTo(self).offset(-10)
             make.centerX.equalTo(self)
+        }
+        
+        self.snapButton.snp_makeConstraints() { make in
+            make.bottom.equalTo(self.southPlayerInfoView.snp_top).offset(-30)
+            make.centerX.equalTo(self)
+            make.width.equalTo(self).multipliedBy(0.5)
         }
     }
     

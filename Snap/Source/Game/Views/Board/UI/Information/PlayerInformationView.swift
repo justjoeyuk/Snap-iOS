@@ -31,13 +31,13 @@ class PlayerInformationView: BaseView {
         setupCardCountLabel()
     }
     
-    func setupNameLabel() {
+    private func setupNameLabel() {
         playerNameLabel.font = UIFont.scaledBoldSystemFontWithSize(10, andScaleFactor: kStandardScaleFactor)
         playerNameLabel.textAlignment = .Center
         addSubview(playerNameLabel)
     }
     
-    func setupCardCountLabel() {
+    private func setupCardCountLabel() {
         playerCardCountLabel.font = UIFont.scaledSystemFontWithSize(10, andScaleFactor: kStandardScaleFactor)
         playerCardCountLabel.textAlignment = .Center
         

@@ -11,9 +11,9 @@ import UIKit
 
 class SuitedCardFrontView : CardFaceView {
     
-    let topValueLabel = UILabel(), bottomValueLabel = UILabel()
-    let topSuitLabel = UILabel(), bottomSuitLabel = UILabel()
-    var suitCollectionView: UICollectionView!
+    private let topValueLabel = UILabel(), bottomValueLabel = UILabel()
+    private let topSuitLabel = UILabel(), bottomSuitLabel = UILabel()
+    private var suitCollectionView: UICollectionView!
     private var decorator: SuitedCardViewDecorator!
     
     var suitCharacter, valueText: String?
@@ -45,36 +45,36 @@ class SuitedCardFrontView : CardFaceView {
         setupSuitCollectionView()
     }
     
-    func setupLayer() {
+    private func setupLayer() {
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.cornerRadius = 5
     }
     
-    func setupTopSuitLabel() {
+    private func setupTopSuitLabel() {
         topSuitLabel.font = UIFont.standardScaledSystemFont()
         addSubview(topSuitLabel)
     }
     
-    func setupTopValueLabel() {
+    private func setupTopValueLabel() {
         topValueLabel.font = UIFont.standardScaledBoldSystemFont()
         addSubview(topValueLabel)
     }
     
-    func setupBottomSuitLabel() {
+    private func setupBottomSuitLabel() {
         bottomSuitLabel.font = UIFont.standardScaledSystemFont()
         bottomSuitLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
         addSubview(bottomSuitLabel)
     }
     
-    func setupBottomValueLabel() {
+    private func setupBottomValueLabel() {
         bottomValueLabel.font = UIFont.standardScaledBoldSystemFont()
         bottomValueLabel.layer.setAffineTransform(CGAffineTransformMakeScale(1, -1))
         
         addSubview(bottomValueLabel)
     }
     
-    func setupSuitCollectionView() {
+    private func setupSuitCollectionView() {
         suitCollectionView.backgroundColor = UIColor.whiteColor()
         addSubview(suitCollectionView)
     }

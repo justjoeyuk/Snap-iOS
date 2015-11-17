@@ -56,23 +56,23 @@ class CardView: BaseView {
         setupBackView()
     }
     
-    func setupLayer() {
+    private func setupLayer() {
         self.clipsToBounds = true
         self.backgroundColor = UIColor.clearColor()
     }
     
-    func setupFrontView() {
+    private func setupFrontView() {
         self.addSubview(frontView)
     }
     
-    func setupBackView() {
+    private func setupBackView() {
         self.addSubview(backView)
     }
     
     
     // MARK: Card Update
     
-    func didUpdateCard() {
+    private func didUpdateCard() {
         if self.card == nil { return }
         
         frontView.cardDidUpdate(self.card!)
