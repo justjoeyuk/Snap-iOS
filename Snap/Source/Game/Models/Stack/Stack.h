@@ -31,7 +31,7 @@
 /** Retrieves the last card added to the deck (FIFO) and removes it from the deck */
 - (id<Card>)getTopCard;
 
-/** Adds a card to the end of the deck */
+/** Adds a card to the top of the deck */
 - (void)addCard:(id<Card>)card;
 
 /** Adds stack to the current stack */

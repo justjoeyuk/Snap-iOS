@@ -30,6 +30,9 @@
 /** Gets the next seat from the table (clockwise position) */
 - (Seat *)nextSeat:(Seat *)currentSeat;
 
+/** Gets the previous seat from the table (anti-clockwise) */
+- (Seat *)previousSeat:(Seat *)currentSeat;
+
 /** Gets a seat at a given position */
 - (Seat *)seatForPosition:(SeatPosition)position;
 

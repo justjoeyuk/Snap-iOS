@@ -76,6 +76,42 @@
     return nextSeat;
 }
 
+- (Seat *)previousSeat:(Seat *)currentSeat
+{
+    if ([self.seats count] == 0) {
+        NSLog(@"%@", @"Cannot get next seat. No seats at table.");
+        return nil;
+    }
+    
+    SeatPosition nextPosition = currentSeat.position;
+    Seat *nextSeat = nil;
+    
+    do {
+        switch (nextPosition) {
+            case North:
+                nextPosition = West;
+                break;
+            case East:
+                nextPosition = North;
+                break;
+            case South:
+                nextPosition = East;
+                break;
+            case West:
+                nextPosition = South;
+                break;
+            default:
+                nextPosition = currentSeat.position;
+                break;
+        }
+        
+        nextSeat = [self seatForPosition:nextPosition];
+        
+    } while (nextSeat == nil);
+    
+    return nextSeat;
+}
+
 - (Seat *)seatForPosition:(SeatPosition)position
 {
     return [self.seats objectForKey:@(position)];
