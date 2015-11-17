@@ -26,9 +26,6 @@ class GameViewController: BaseViewController {
     /** The stack of cards in the center of the table */
     private var centerStack: Stack
     
-    /** The timer used between turns */
-    private var turnTimer: NSTimer
-    
     /** The last four card views placed on the table */
     private var lastFourCardViews: Array<CardView>
     
@@ -50,13 +47,12 @@ class GameViewController: BaseViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         deck = Deck()
         centerStack = Stack()
-        turnTimer = NSTimer()
         isPaused = false
         
-        northPlayer = Player(name: "North Bot", cardStack: nil)
-        westPlayer = Player(name: "West Bot", cardStack: nil)
-        eastPlayer = Player(name: "East Bot", cardStack: nil)
-        humanPlayer = Player(name: "Me", cardStack:nil)
+        northPlayer = Player(name: "Mike", cardStack: nil)
+        westPlayer = Player(name: "Kate", cardStack: nil)
+        eastPlayer = Player(name: "Michelle", cardStack: nil)
+        humanPlayer = Player(name: "You", cardStack:nil)
         
         lastFourCardViews = []
         gameTable = Table()
@@ -68,88 +64,166 @@ class GameViewController: BaseViewController {
         self.view = BoardView()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        startGame()
-    }
-    
     
     // MARK: Setup
     
     override func setup() {
-        setupDeck()
-        setupPlayers()
         setupSeats()
-        
         setupSnapButton()
-    }
-    
-    private func setupPlayers() {
-        let stacks: Array<Stack> = deck.split(4)
-        
-        humanPlayer.cardStack = stacks[0];
-        northPlayer.cardStack = stacks[1];
-        eastPlayer.cardStack = stacks[2];
-        westPlayer.cardStack = stacks[3];
+        setupPlayButton()
     }
     
     private func setupSeats() {
+        // I would have made this more efficient but time was short
         let southSeat = Seat(player: humanPlayer, atPosition: .South)
         let northSeat = Seat(player: northPlayer, atPosition: .North)
         let eastSeat = Seat(player: eastPlayer, atPosition: .East)
         let westSeat = Seat(player: westPlayer, atPosition: .West)
         
-        gameTable.addSeat(southSeat)
-        gameTable.addSeat(northSeat)
-        gameTable.addSeat(westSeat)
-        gameTable.addSeat(eastSeat)
-    }
-    
-    private func setupDeck() {
-        deck = DeckGenerator.generateSuitedDeck()
-        deck.shuffleCards()
+        let seats: Array<Seat> = [southSeat, northSeat, eastSeat, westSeat]
+        
+        boardView.updatePlayerInformationForSeats(seats)
+        gameTable.addSeats(seats)
     }
     
     private func setupSnapButton() {
         self.boardView.snapButton.addTarget(self, action: "snap", forControlEvents: .TouchUpInside)
     }
     
+    private func setupPlayButton() {
+        self.boardView.playButton.addTarget(self, action: "startGame", forControlEvents: .TouchUpInside)
+    }
+    
+    private func setupPlayers() {
+        deck = DeckGenerator.generateSuitedDeck()
+        deck.shuffleCards()
+        
+        let stacks: Array<Stack> = deck.split(4)
+        
+        humanPlayer.cardStack = stacks[0];
+        northPlayer.cardStack = stacks[1];
+        eastPlayer.cardStack = stacks[2];
+        westPlayer.cardStack = stacks[3];
+        
+        boardView.updatePlayerInformationForSeats(gameTable.seats.allValues as! [Seat])
+    }
+    
     
     // MARK: Game Start
     
-    private func startGame() {
-        currentSeat = gameTable.seatForPosition(humanPlayer.seatPosition)
+    func startGame() {
+        currentSeat = gameTable.seatForPosition(eastPlayer.seatPosition)
+        boardView.showSnapButton()
+        
+        setupPlayers()
+        clearTable()
+        
         nextTurn()
+    }
+    
+    func stopGame(message:String) {
+        UIAlertView(title: "Game Over", message: message, delegate: nil, cancelButtonTitle: "Ok").show()
+        
+        self.clearTable()
+        self.boardView.showPlayButton()
+    }
+    
+    private func clearTable() {
+        lastFourCardViews.forEach { view in view.removeFromSuperview() }
+        lastFourCardViews.removeAll()
     }
     
     
     // MARK: Snap
     
     func snap() {
-        let cardCount = lastFourCardViews.count
-        if (cardCount < 2) { return }
+        callSnap(humanPlayer)
+    }
+    
+    private func callBotSnaps() {
+        let bots = [northPlayer, westPlayer, eastPlayer]
         
-        pauseGame()
-        
-        let topCardView = lastFourCardViews[cardCount - 1]
-        let lastCardView = lastFourCardViews[cardCount - 2]
-        
-        self.animateTopTwoCardsAwayFromDeck(topCardView, lastCardView: lastCardView) { completed in
-            sleep(2)
-            self.animateTopTwoCardsIntoDeck(topCardView, lastCardView: lastCardView) { completed in
-                
-                
+        bots.forEach() { bot in
+            let range = 0.7 - 0.2;
+            let val = (Float(arc4random()) / Float(UINT32_MAX)) * Float(range) + 0.3;
+            
+            print("BOT VAL: \(val)")
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(val * Float(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
+                self.callSnap(bot)
             }
         }
     }
     
+    private func callSnap(player:Player) {
+        if (lastFourCardViews.count < 2 || isPaused) { return }
+        
+        UIAlertView(title: "Snap!", message: "\(player.name) Snapped!", delegate: nil, cancelButtonTitle: "Ok").show()
+        pauseGame()
+        
+        let topCardView = lastFourCardViews.last!
+        let lastCardView = lastFourCardViews[lastFourCardViews.count - 2]
+        
+        self.animateTopTwoCardsAwayFromDeck(topCardView, lastCardView: lastCardView) { completed in
+            sleep(1)
+            self.animateTopTwoCardsIntoDeck(topCardView, lastCardView: lastCardView) { completed in
+                sleep(1)
+                
+                if self.compareTopCards() {
+                    self.validSnap(player)
+                }
+                else {
+                    self.invalidSnap()
+                }
+            }
+        }
+    }
+    
+    private func validSnap( player:Player ) {
+        let seat = gameTable.seatForPosition(player.seatPosition)
+        
+        player.cardStack.addStack(centerStack)
+        boardView.updatePlayerInformationForSeat(seat)
+        
+        print("Snap! \(player.name) has \(player.cardStack.count) cards.")
+        if (player.cardStack.count == deck.capacity) {
+            self.stopGame("\(player.name) Won!")
+        }
+        else {
+            self.clearTable()
+            nextTurn()
+        }
+    }
+    
+    private func invalidSnap() {
+        nextTurn()
+    }
+    
+    private func compareTopCards() -> Bool {
+        if (lastFourCardViews.count < 2) { return false }
+        
+        let topCardView = lastFourCardViews.last!
+        let lastCardView = lastFourCardViews[lastFourCardViews.count - 2]
+        
+        let topCard = topCardView.card
+        let lastCard = lastCardView.card
+        
+        return topCard?.numericIdentifier() == lastCard?.numericIdentifier()
+    }
+    
+    
+    // MARK: Pause
+    
     func pauseGame() {
         isPaused = true
         
-        let card = nextCardView?.card
-        currentSeat.player?.cardStack.addCard(card)
-        
-        nextCardView?.card = nil
-        nextCardView?.removeFromSuperview()
+        if let card = nextCardView?.card {
+            currentSeat.player?.cardStack.addCard(card)
+            currentSeat = gameTable.previousSeat(currentSeat)
+            
+            nextCardView?.card = nil
+            nextCardView?.removeFromSuperview()
+        }
     }
     
     private func animateTopTwoCardsAwayFromDeck(topCardView:CardView, lastCardView:CardView, callback:SingleBoolCallback) {
@@ -159,11 +233,11 @@ class GameViewController: BaseViewController {
         var lastCardViewFrame = lastCardView.frame
         lastCardViewFrame.offsetInPlace(dx: lastCardViewFrame.width/4, dy: -lastCardViewFrame.height/8)
         
-        UIView.animateWithDuration(1, animations: {
+        UIView.animateWithDuration(0.4, animations: {
             topCardView.frame = topCardViewFrame
             lastCardView.frame = lastCardViewFrame
-        }) { completed in
-            callback(completed)
+            }) { completed in
+                callback(completed)
         }
     }
     
@@ -174,7 +248,7 @@ class GameViewController: BaseViewController {
         var lastCardViewFrame = lastCardView.frame
         lastCardViewFrame.offsetInPlace(dx: -lastCardViewFrame.width/4, dy: lastCardViewFrame.height/8)
         
-        UIView.animateWithDuration(1, animations: {
+        UIView.animateWithDuration(0.4, animations: {
             topCardView.frame = topCardViewFrame
             lastCardView.frame = lastCardViewFrame
             }) { completed in
@@ -186,51 +260,62 @@ class GameViewController: BaseViewController {
     // MARK: Game Ticks
     
     func nextTurn() {
-        self.turnTimer.invalidate()
-        
         if (lastFourCardViews.count == 4) { removeOldestCardView() }
-        if (centerStack.count == 52) { return } // DECK EMPTY
+        if (centerStack.count == deck.capacity) { stopGame("Draw. No Cards Left!"); return; }
         
-        if let nextPlayer = currentSeat.player {
-            let card = nextPlayer.cardStack.getTopCard()
-            let cardView = CardView(card: card)
-            
-            self.nextCardView = cardView;
-            cardView.userInteractionEnabled = false
-            
-            self.presentCardView(cardView)
-        }
-        
-        boardView.showPlayerInformationForSeat(currentSeat)
+        let lastSeat = currentSeat
+        boardView.updatePlayerInformationForSeat(lastSeat)
         currentSeat = gameTable.nextSeat(currentSeat)
+        
+        self.isPaused = false
+        
+        if let currentPlayer = currentSeat.player {
+            if currentPlayer.cardStack.count != 0 {
+                let card = currentPlayer.cardStack.getTopCard()
+                let cardView = CardView(card: card)
+                
+                self.nextCardView = cardView;
+                self.presentCardView(cardView, fromSeat:currentSeat)
+            }
+            else {
+                nextTurn()
+            }
+        }
     }
     
-    private func presentCardView(cardView:CardView) {
-        let initialWidth = UIScreen.mainScreen().bounds.width / 1.5
-        let initialHeight = initialWidth / 0.7
+    private func presentCardView(cardView:CardView, fromSeat:Seat) {
+        let cardWidth = UIScreen.mainScreen().bounds.width / 2
+        let cardHeight = cardWidth / 0.7
         
-        let width = UIScreen.mainScreen().bounds.width / 2
-        let height = width / 0.7
-        
-        cardView.frame = Table.initialFrameForCardWithWidth(initialWidth, cardHeight: initialHeight, atSeat: currentSeat)
-        let endFrame = CGRect(x: (self.view.center.x-width/2), y: 100, width: width, height: height)
+        cardView.frame = Table.initialFrameForCardWithWidth(cardWidth * 0.7, cardHeight: cardHeight * 0.7, atSeat: currentSeat)
+        let endFrame = CGRect(x: (self.view.center.x-cardWidth/2), y: 100, width: cardWidth, height: cardHeight)
         
         UIView.animateWithDuration(0.8, animations: {
             cardView.frame = endFrame
             }) { completed in
-                if (completed) {
-                    self.lastFourCardViews.append(cardView)
-                    self.centerStack.addCard(cardView.card)
+                if !completed { return }
+                
+                if !self.isPaused {
                     
-                    if (!self.isPaused) {
-                        self.turnTimer = NSTimer(timeInterval: 0.2, target: self, selector: "nextTurn", userInfo: nil, repeats: true)
-                        NSRunLoop.currentRunLoop().addTimer(self.turnTimer, forMode:NSRunLoopCommonModes)
+                    self.addCardViewToCenterStack(cardView)
+                    self.boardView.updatePlayerInformationForSeats(self.gameTable.seats.allValues as! [Seat])
+                    
+                    if self.compareTopCards() {
+                        self.callBotSnaps()
                     }
+                    
+                    self.nextTurn()
                 }
         }
-        
         boardView.addSubview(cardView)
-        cardView.flip(Table.flipDirectionForSeat(currentSeat))
+        
+        let flipDirection = Table.flipDirectionForSeat(fromSeat)
+        cardView.flip(flipDirection)
+    }
+    
+    private func addCardViewToCenterStack(cardView:CardView) {
+        self.lastFourCardViews.append(cardView)
+        self.centerStack.addCard(cardView.card)
     }
     
     private func removeOldestCardView() {

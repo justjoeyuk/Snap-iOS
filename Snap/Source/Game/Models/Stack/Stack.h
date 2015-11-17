@@ -24,6 +24,9 @@
 /** The number of cards left in stack */
 @property (assign, nonatomic, readonly) NSUInteger count;
 
+/** The capacity of the stack */
+@property (assign, nonatomic, readonly) NSUInteger capacity;
+
 
 /** Initializes the Deck with a capacity */
 - (instancetype)initWithCapacity:(NSUInteger)deckSize;

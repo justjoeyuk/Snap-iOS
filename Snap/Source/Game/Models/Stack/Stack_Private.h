@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSMutableArray *cards;
 
+@property (assign, nonatomic) NSUInteger capacity;
+
 @end

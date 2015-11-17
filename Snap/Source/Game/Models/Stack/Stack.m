@@ -27,6 +27,7 @@
 - (instancetype)initWithCapacity:(NSUInteger)deckSize
 {
     if (self = [super init]) {
+        self.capacity = deckSize;
         self.cards = [NSMutableArray arrayWithCapacity:deckSize];
         return self;
     }

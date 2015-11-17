@@ -47,11 +47,19 @@ class PlayerInformationView: BaseView {
     
     // MARK: Update
     
-    func updateForPlayer(player:Player) {
-        playerNameLabel.text = player.name
-        playerCardCountLabel.text = "\(player.cardStack.count) Cards"
-        
-        updateConstraints()
+    func updateForPlayer(player:Player?) {
+        if let player = player {
+            self.hidden = false
+            let count = (player.cardStack == nil) ? 0 : player.cardStack.count
+            
+            playerNameLabel.text = player.name
+            playerCardCountLabel.text = "\(count) Cards"
+            
+            updateConstraints()
+        }
+        else {
+            self.hidden = true
+        }
     }
     
 }

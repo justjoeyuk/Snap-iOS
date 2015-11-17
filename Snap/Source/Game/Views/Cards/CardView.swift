@@ -21,11 +21,11 @@ class CardView: BaseView {
     
     var card: Card? { didSet {
         didUpdateCard()
-        }}
+    }}
     
     var face: CardFace? { willSet {
         updateFace(newValue)
-        }}
+    }}
     
     
     // MARK: Initialization
@@ -51,6 +51,8 @@ class CardView: BaseView {
     // MARK: Setup
     
     override func setup() {
+        self.userInteractionEnabled = false
+        
         setupLayer()
         setupFrontView()
         setupBackView()

@@ -35,6 +35,13 @@
     }
 }
 
+- (void)addSeats:(NSArray *)seats
+{
+    for (Seat *seat in seats) {
+        [self addSeat:seat];
+    }
+}
+
 - (void)removeSeatFromPosition:(SeatPosition)position
 {
     [self.seats removeObjectForKey:@(position)];

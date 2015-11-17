@@ -21,8 +21,11 @@
 // The seats on the table
 @property (strong, nonatomic) NSMutableDictionary *seats;
 
-/** Adds a seat to the table at a given position */
+/** Adds a seat to the table */
 - (void)addSeat:(Seat *)seat;
+
+/** Adds a list of seats to the table */
+- (void)addSeats:(NSArray *)seats;
 
 /** Removes a seat from a given position */
 - (void)removeSeatFromPosition:(SeatPosition)position;
